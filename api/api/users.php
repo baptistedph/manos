@@ -10,4 +10,14 @@ $db = $database->connect();
 
 $user = new User($db);
 
-echo $user->get_all();
+if (isset($_GET['userId'])) {
+  $user_id = $_GET['userId'];
+  echo $user->get_single($user_id);
+} else {
+  echo $user->get_all();
+}
+
+
+
+
+
