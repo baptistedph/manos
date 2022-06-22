@@ -1,12 +1,17 @@
 <?php
+
+require_once __DIR__ . '/Env.php';
+
 class Database {
 
-  private $host = '159.223.164.94';
-  private $dbname = 'manos';
-  private $username = 'manos';
-  private $password = 'manos1234';
-  private $port = '3306';
-  private $conn;
+  function __construct() {
+    $this->env = new Env();
+    $this->host = $this->env->get('HOST');
+    $this->dbname = $this->env->get('DBNAME');
+    $this->username = $this->env->get('USERNAME');
+    $this->password = $this->env->get('PASSWORD');
+    $this->port = $this->env->get('PORT');
+  }
 
   public function connect() {
     $this->conn = null;
