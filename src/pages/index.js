@@ -2,7 +2,7 @@ import UsersTable from '../components/UsersTable'
 import { Flex, Heading, Container } from '@chakra-ui/react'
 import { fetchApi } from '../lib/api'
 import "swiper/css/bundle";
-import Project_card from '../components/Project_card'
+import ProjectCard from '../components/ProjectCard';
 
 // export const getServerSideProps = async ({ req }) => {
 
@@ -20,7 +20,7 @@ const Home = ({ users }) => {
 	return (
 		<div>
 			<h1>hello !!!</h1>
-			<Project_card />
+			<ProjectCard />
 		</div>
 		// <Flex
 		// 	alignItems="center"
