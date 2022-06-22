@@ -5,13 +5,9 @@ import { Box, Badge, StarIcon } from '@chakra-ui/react'
 import ProjectCardSwiper from "./ProjectCardSwiper";
 
 const ProjectCard = () => {
-	const property = {
-		beds: 3,
-		baths: 2,
-		title: 'Modern home in city center in the heart of historic Los Angeles',
-		formattedPrice: '$1,900.00',
-		reviewCount: 34,
-		rating: 4,
+	const project = {
+		title: 'Bibliothèque',
+		description: 'Fabrication et pose d’une bibliothèque en ébène du gabon et valchromat noir et gris. Pose de miroirs 6mm classe 4. Travail réalisé avec CréaArchitecture.',
 	}
 
 	return (
@@ -19,22 +15,6 @@ const ProjectCard = () => {
 			<ProjectCardSwiper />
 
 			<Box p='6'>
-				<Box display='flex' alignItems='baseline'>
-					<Badge borderRadius='full' px='2' colorScheme='teal'>
-						New
-					</Badge>
-					<Box
-						color='gray.500'
-						fontWeight='semibold'
-						letterSpacing='wide'
-						fontSize='xs'
-						textTransform='uppercase'
-						ml='2'
-					>
-						{property.beds} beds &bull; {property.baths} baths
-					</Box>
-				</Box>
-
 				<Box
 					mt='1'
 					fontWeight='semibold'
@@ -42,14 +22,11 @@ const ProjectCard = () => {
 					lineHeight='tight'
 					noOfLines={1}
 				>
-					{property.title}
+					{project.title}
 				</Box>
 
 				<Box>
-					{property.formattedPrice}
-					<Box as='span' color='gray.600' fontSize='sm'>
-						/ wk
-					</Box>
+					{project.description}
 				</Box>
 			</Box>
 		</Box>
