@@ -19,7 +19,6 @@ const Home = ({ users }) => {
 
 	return (
 		<div>
-			<h1>hello !!!</h1>
 			<ProjectCard />
 		</div>
 		// <Flex

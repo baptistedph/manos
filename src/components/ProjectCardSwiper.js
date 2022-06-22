@@ -20,15 +20,13 @@ const ProjectCardSwiper = () => {
 					modules={[Pagination, Navigation]}
 					className="mySwiper"
 				>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0791.jpg" alt="peinture roi lion 1" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0792.jpg" alt="peinture roi lion 2" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0794.jpg" alt="peinture roi lion 3" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0796.jpg" alt="peinture roi lion 4" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0798.jpg" alt="peinture roi lion 5" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0799.jpg" alt="peinture roi lion 6" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0800.jpg" alt="peinture roi lion 7" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0801.jpg" alt="peinture roi lion 8" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0802.jpg" alt="peinture roi lion 9" className="swiper-slide img" /></SwiperSlide>
+					{/* after testing with pictures of different sizes, it appears the width is fix. */}
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/test_slider/img1.jpg" alt="image fairytail 1" className="project_swiper_img" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/test_slider/img2.jpg" alt="image fairytail 2" className="project_swiper_img" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/test_slider/img3.jpg" alt="peinture roi lion 1" className="project_swiper_img" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/test_slider/img4.jpg" alt="peinture roi lion 2" className="project_swiper_img" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/test_slider/img5.jpg" alt="peinture roi lion 3" className="project_swiper_img" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/test_slider/img6.jpg" alt="peinture roi lion 4" className="project_swiper_img" /></SwiperSlide>
 				</Swiper>
 			</>
 		</div>
