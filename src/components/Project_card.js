@@ -22,15 +22,15 @@ const Project_card = () => {
 					modules={[Pagination, Navigation]}
 					className="mySwiper"
 				>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0791.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0792.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0794.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0796.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0798.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0799.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0800.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0801.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
-					<SwiperSlide><img src="./assets/test_slider/IMG_0802.jpg" alt="roi lion" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0791.jpg" alt="peinture roi lion 1" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0792.jpg" alt="peinture roi lion 2" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0794.jpg" alt="peinture roi lion 3" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0796.jpg" alt="peinture roi lion 4" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0798.jpg" alt="peinture roi lion 5" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0799.jpg" alt="peinture roi lion 6" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0800.jpg" alt="peinture roi lion 7" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0801.jpg" alt="peinture roi lion 8" className="swiper-slide img" /></SwiperSlide>
+					<SwiperSlide><img src="./assets/test_slider/IMG_0802.jpg" alt="peinture roi lion 9" className="swiper-slide img" /></SwiperSlide>
 				</Swiper>
 			</>
 		</div>
