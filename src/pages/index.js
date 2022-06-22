@@ -1,8 +1,9 @@
-import UsersTable from '../components/UsersTable'
-import { Flex, Heading, Container } from '@chakra-ui/react'
-import { fetchApi } from '../lib/api'
+import UsersTable from "../components/UsersTable";
+import { Flex, Heading, Container } from "@chakra-ui/react";
+import { fetchApi } from "../lib/api";
+import Contact from "../components/contact";
 
-export const getServerSideProps = async ({ req }) => {
+/* export const getServerSideProps = async ({ req }) => {
   console.log(req)
 
   const users = await fetchApi('/users')
@@ -12,23 +13,12 @@ export const getServerSideProps = async ({ req }) => {
       users,
     },
   }
-}
+} */
 
 const Home = ({ users }) => {
-  console.log(users)
+  console.log(users);
 
-  return (
-    <Flex
-      alignItems="center"
-      flexDirection="column"
-      justifyContent="center"
-      h="100vh">
-      <Container maxWidth={500}>
-        <Heading>Users</Heading>
-        <UsersTable users={users} />
-      </Container>
-    </Flex>
-  )
-}
+  return <Contact />;
+};
 
-export default Home
+export default Home;
