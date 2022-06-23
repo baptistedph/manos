@@ -36,4 +36,4 @@ const Category = () => {
     </Box>
   );
 };
-export default Job;
+export default Category;
