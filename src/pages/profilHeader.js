@@ -1,4 +1,4 @@
-import { Box, Image, Heading, Text, Button } from '@chakra-ui/react'
+import { Box, Image, Heading, Text, Button,Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
@@ -17,7 +17,7 @@ import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
                 src='https://bit.ly/dan-abramov'
                 alt='Dan Abramov'
                 position="absolute"
-                bottom="110px"
+                bottom="210px"
                 ml="16px"
                 w="90px"
                 h="90px"
@@ -49,7 +49,31 @@ import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
                 </Button>
                     </Text>
             </Box>
+            <Tabs>
+            <TabList>
+                <Tab>Projet</Tab>
+                <Tab>Planning</Tab>
+                <Tab>Contact</Tab>
+                <Tab>Réseau</Tab>
+            </TabList>
+
+            <TabPanels>
+                <TabPanel>
+                    <p>one!</p>
+                </TabPanel>
+                <TabPanel>
+                    <p>two!</p>
+                </TabPanel>
+                <TabPanel>
+                    <p>three!</p>
+                </TabPanel>
+                <TabPanel>
+                    <p>four!</p>
+                </TabPanel>
+            </TabPanels>
+            </Tabs>
         </Box>
+        
          );
     }
 
