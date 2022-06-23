@@ -29,11 +29,11 @@ import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
             top="15px" 
             w="30px" 
             display="flex">
-                <Button variant="outline" colorScheme="green" mr="10px" borderRadius="50px" size="sm">
-                    <FontAwesomeIcon icon={faEnvelope} color="green"> </FontAwesomeIcon>
+                <Button variant="outline" colorScheme="teal" mr="10px" borderRadius="50px" size="sm">
+                    <FontAwesomeIcon icon={faEnvelope} color="teal"> </FontAwesomeIcon>
                 </Button>
-                <Button  variant="outline" colorScheme="green" mr="10px" borderRadius="50px" size="sm">
-                    <FontAwesomeIcon icon={faShareNodes} color="green"></FontAwesomeIcon>
+                <Button  variant="outline" colorScheme="teal" mr="10px" borderRadius="50px" size="sm">
+                    <FontAwesomeIcon icon={faShareNodes} color="teal"></FontAwesomeIcon>
                 </Button>
             </Box>
             <Box pt="30px">
@@ -49,8 +49,8 @@ import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
                 </Button>
                     </Text>
             </Box>
-            <Tabs variant="line" colorScheme="green">
-            <TabList color="green">
+            <Tabs variant="line" colorScheme="teal">
+            <TabList color="teal">
                 <Tab>Projet</Tab>
                 <Tab>Planning</Tab>
                 <Tab>Contact</Tab>
