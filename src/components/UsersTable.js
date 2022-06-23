@@ -14,16 +14,18 @@ const UsersTable = ({ users }) => {
       <Table variant="simple">
         <Thead>
           <Tr>
-            <Th>id</Th>
-            <Th>name</Th>
+            {Object.keys(users[0]).map((key, i) => {
+              return <Th key={i}>{key}</Th>
+            })}
           </Tr>
         </Thead>
         <Tbody>
           {users.map(user => {
             return (
               <Tr key={user.id}>
-                <Td>{user.id}</Td>
-                <Td>{user.name}</Td>
+                {Object.values(user).map((value, i) => {
+                  return <Td key={i}>{value || 'null'}</Td>
+                })}
               </Tr>
             )
           })}
