@@ -11,3 +11,12 @@
 .swiper-button-next::after {
 	color: #319795;
 }
+
+.swiper-pagination {
+	margin-left: 17em;
+	margin-bottom: 10.5em;
+	max-width: 50px;
+	color: white;
+	background-color: #FFFFFF66;
+	border-radius: 20px;
+}

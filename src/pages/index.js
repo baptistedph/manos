@@ -31,12 +31,12 @@ const Home = ({ users }) => {
 			// 		<UsersTable users={users} />
 			// 	</Container>
 			// </Flex> */}
-				<Flex justifyContent="center" alignItems="center" h="100vh">
+				{/* <Flex justifyContent="center" alignItems="center" h="100vh">
 					<Container maxW="4xl">
 						<Heading>Users</Heading>
 						<UsersTable users={users} />
 					</Container>
-				</Flex>
+				</Flex> */}
 			</div>
 		</div>
 	)
