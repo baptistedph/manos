@@ -10,15 +10,18 @@ class ProjectPicture {
   }
 
   public function post($uuid) {
+
 		// path to storage directory
 		$target_dir = __DIR__ . "/../uploads/";
 		$full_name = $_FILES["projectPictures"]["name"];
-		require __DIR__ . "/../src/uuid.php";
+		$name_exploded = explode(".",$full_name);
+		require_once __DIR__ . "/../src/uuid.php";
 		$file_name = guidv4($full_name);
-		$target_file = $target_dir . basename($full_name);
+		$extension = $name_exploded[1];
 		// get extension in lower
+		$full_name = $file_name . "." . $extension;
+		$target_file = $target_dir . basename($full_name);
 		$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-		$full_name = $file_name . "." . $imageFileType;
 		
 		// if it's not a picture
 		$check = getimagesize($_FILES["projectPictures"]["tmp_name"]);
@@ -49,13 +52,17 @@ class ProjectPicture {
 
 		// if everything is good
 		if (move_uploaded_file($_FILES["projectPictures"]["tmp_name"], $target_file)) {
-			$query = "INSERT INTO $this->project_table (`name`, `uuid`) VALUES (:name, :uuid)";
+			$query = "INSERT INTO $this->project_picture_table (`name`, `uuid`) VALUES (:name, :uuid)";
 			$stmt = $this->conn->prepare($query);
 
 			$stmt->execute([
 				":name" => $full_name,
 				":uuid" => $uuid
 			]);
+			return json_encode([
+				"success" => true,
+				"message" => "image enregistrée"
+			]);	
 		} else {
 			return json_encode([
 				"success" => false,

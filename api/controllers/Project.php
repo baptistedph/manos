@@ -34,7 +34,10 @@ class Project {
   }
 
   public function post($uuid) {
-    $body = json_decode(file_get_contents('php://input'), true);
+    // $body = json_decode(file_get_contents('php://input'), true);
+    $body = $_POST;
+    var_dump($body);
+    // die();
     $keys = array_keys($body);
     $values = array_values($body);
 
