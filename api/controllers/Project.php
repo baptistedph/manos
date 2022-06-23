@@ -91,5 +91,20 @@ class Project {
 			"message" => "Modifié avec succé"
 		]);		
   }
+
+  public function delete($project_id) {
+    $query = "DELETE FROM `projects` WHERE `id` = :project_id";
+
+    $stmt = $this->conn->prepare($query);
+    $stmt->execute([
+      ":project_id" => $project_id
+    ]);
+
+    return json_encode([
+			"success" => true,
+			"message" => "suprimé avec succé"
+		]);	
+
+  }
 	
 }

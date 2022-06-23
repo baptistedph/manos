@@ -28,3 +28,8 @@ if($_SERVER['REQUEST_METHOD'] == 'PATCH') {
 	$project_id = $_GET['projectId'];
   echo $project->patch($project_id);
 }
+
+if($_SERVER['REQUEST_METHOD'] == 'DELETE') {
+	$project_id = $_GET['projectId'];
+  echo $project->delete($project_id);
+}
