@@ -19,18 +19,26 @@ const Home = ({ users }) => {
 
 	return (
 		<div>
-			<ProjectCard />
+			<div>
+				<ProjectCard />
+				{/* // <Flex
+			// 	alignItems="center"
+			// 	flexDirection="column"
+			// 	justifyContent="center"
+			// 	h="100vh">
+			// 	<Container maxWidth={500}>
+			// 		<Heading>Users</Heading>
+			// 		<UsersTable users={users} />
+			// 	</Container>
+			// </Flex> */}
+				<Flex justifyContent="center" alignItems="center" h="100vh">
+					<Container maxW="4xl">
+						<Heading>Users</Heading>
+						<UsersTable users={users} />
+					</Container>
+				</Flex>
+			</div>
 		</div>
-		// <Flex
-		// 	alignItems="center"
-		// 	flexDirection="column"
-		// 	justifyContent="center"
-		// 	h="100vh">
-		// 	<Container maxWidth={500}>
-		// 		<Heading>Users</Heading>
-		// 		<UsersTable users={users} />
-		// 	</Container>
-		// </Flex>
 	)
 }
 
