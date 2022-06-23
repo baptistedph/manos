@@ -10,7 +10,7 @@ class ProjectPicture {
   }
 
   public function post($uuid) {
-
+		$user_id = $_POST['user_id'];
 		// path to storage directory
 		$target_dir = __DIR__ . "/../uploads/";
 		$full_name = $_FILES["projectPictures"]["name"];
@@ -52,12 +52,13 @@ class ProjectPicture {
 
 		// if everything is good
 		if (move_uploaded_file($_FILES["projectPictures"]["tmp_name"], $target_file)) {
-			$query = "INSERT INTO $this->project_picture_table (`name`, `uuid`) VALUES (:name, :uuid)";
+			$query = "INSERT INTO $this->project_picture_table (`name`, `uuid`, `user_id`) VALUES (:name, :uuid, :userId)";
 			$stmt = $this->conn->prepare($query);
 
 			$stmt->execute([
 				":name" => $full_name,
-				":uuid" => $uuid
+				":uuid" => $uuid,
+				"userId" => $user_id
 			]);
 			return json_encode([
 				"success" => true,

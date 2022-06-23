@@ -10,19 +10,24 @@ class Project {
   }
 
   public function get_all_from_user($user_id) {
-    $query = "SELECT * FROM $this->project_table WHERE `user_id` = :user_id";
+    // $query = "SELECT * FROM $this->project_table WHERE `user_id` = :user_id";
+    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan, project_pictures.id as project_pictures_id, name, project_pictures.uuid as uuid";
+    $query = "SELECT $fields FROM `projects` INNER JOIN `project_pictures` ON projects.uuid = project_pictures.uuid AND projects.user_id = :userId";
 
     $stmt = $this->conn->prepare($query);
 
     $stmt->execute([
-			':user_id' => $user_id
+			':userId' => $user_id
     ]);
 
     return json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
   }
 
   public function get_single($project_id) {
-    $query = "SELECT * FROM $this->project_table WHERE `id` = :project_id";
+
+    // $query = "SELECT * FROM $this->project_table WHERE `id` = :project_id";
+    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan, project_pictures.id as project_pictures_id, name, project_pictures.uuid as uuid";
+    $query = "SELECT $fields FROM `projects` INNER JOIN `project_pictures` ON projects.uuid = project_pictures.uuid AND projects.id = :project_id";
 
     $stmt = $this->conn->prepare($query);
 
@@ -30,7 +35,7 @@ class Project {
       ':project_id' => $project_id
     ]);
 
-    return json_encode($stmt->fetch(PDO::FETCH_ASSOC));
+    return json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
   }
 
   public function post($uuid) {
