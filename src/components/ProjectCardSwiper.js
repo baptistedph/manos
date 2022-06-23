@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Pagination } from "swiper";
 
 const ProjectCardSwiper = () => {
 	return (
@@ -16,8 +16,7 @@ const ProjectCardSwiper = () => {
 					pagination={{
 						type: "fraction",
 					}}
-					navigation={true}
-					modules={[Pagination, Navigation]}
+					modules={[Pagination]}
 					className="mySwiper"
 				>
 					{/* after testing with pictures of different sizes, it appears the width is fix. */}
