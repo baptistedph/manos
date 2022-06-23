@@ -2,20 +2,19 @@ import UsersTable from '../components/UsersTable'
 import { Flex, Heading, Container } from '@chakra-ui/react'
 import { fetchApi } from '../lib/api'
 
-export const getServerSideProps = async ({ req }) => {
-  console.log(req)
+// export const getServerSideProps = async ({ req }) => {
+//   console.log(req)
 
-  const users = await fetchApi('/users')
+//   const users = await fetchApi('/users')
 
-  return {
-    props: {
-      users,
-    },
-  }
-}
+//   return {
+//     props: {
+//       users,
+//     },
+//   }
+// }
 
 const Home = ({ users }) => {
-  console.log(users)
 
   return (
     <Flex
