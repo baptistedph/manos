@@ -1,7 +1,7 @@
-import UsersTable from "../components/UsersTable";
-import { Flex, Heading, Container } from "@chakra-ui/react";
-import { fetchApi } from "../lib/api";
-import Contact from "../components/contact";
+import UsersTable from "../components/UsersTable"
+import { Flex, Heading, Container } from "@chakra-ui/react"
+import { fetchApi } from "../lib/api"
+import Contact from "../components/contact"
 
 /* export const getServerSideProps = async ({ req }) => {
   console.log(req)
@@ -16,9 +16,7 @@ import Contact from "../components/contact";
 } */
 
 const Home = ({ users }) => {
-  console.log(users);
+  return <Contact />
+}
 
-  return <Contact />;
-};
-
-export default Home;
+export default Home
