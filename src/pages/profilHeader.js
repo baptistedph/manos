@@ -49,8 +49,8 @@ import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
                 </Button>
                     </Text>
             </Box>
-            <Tabs>
-            <TabList>
+            <Tabs variant="line" colorScheme="green">
+            <TabList color="green">
                 <Tab>Projet</Tab>
                 <Tab>Planning</Tab>
                 <Tab>Contact</Tab>
