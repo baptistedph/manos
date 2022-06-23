@@ -22,13 +22,14 @@ const Result = () => {
     >
 
       {/* Box pour les photos */}
-  <Box>
+  <Box
+    fontSize={10}
+  >
   <Swiper
         pagination={{
           type: "fraction",
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]}
         className="mySwiper"
         
       >

@@ -20,8 +20,9 @@ body{
     
 }
 .swiper-pagination{
-    margin-left: 19em;
-    margin-bottom: 12em;
+    margin-left: 27em;
+    margin-bottom: 17em;
+    padding: 0.5em 0.8em 0.5em 0.8em;
     max-width: 50px;
     color: white;
     background-color: #FFFFFF66;
