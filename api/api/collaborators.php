@@ -16,6 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 		echo $collaborator->get_collab_from_project($project_id);
 	} else if (isset($_GET['userId'])) {
 		$user_id = $_GET['userId'];
-		echo $project->get_collab_from_user($user_id);
+		echo $collaborator->get_collab_from_user($user_id);
 	}
 }
