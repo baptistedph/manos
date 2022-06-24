@@ -1,6 +1,7 @@
 <?php
 require_once '../config/Database.php';
 require_once '../controllers/User.php';
+require_once '../src/upload_function.php';
 
 header("Access-Control-Allow-Origin: *");
 header('Content-type: application/json');
@@ -23,7 +24,17 @@ if ($_SERVER["REQUEST_METHOD"] === "GET"){
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  echo $user->post();
+  $profile_picture = NULL;
+  $banner = NULL;
+  if (isset($_FILES['profile_picture'])){
+    $param = 'profile_picture';
+    $profile_picture = upload_files($param);
+  }
+  if (isset($_FILES['banner'])) {
+    $param = 'banner';
+    $banner = upload_files($param);
+  }
+  echo $user->post($profile_picture, $banner);
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'PATCH') {
