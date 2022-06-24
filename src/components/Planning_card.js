@@ -20,29 +20,39 @@ import { Grid, GridItem } from "@chakra-ui/react";
 const Planning_card = () => {
   return (
     <div>
-      <Text fontSize="2xl" m="20px" fontWeight="bold">
+      <Text
+        fontSize="0.875em"
+        ml="1em"
+        mb="0.75em"
+        mt="1.25em"
+        fontWeight="bold"
+      >
         Planning 2022
       </Text>
       <Box
-        borderWidth="2px"
-        borderRadius="10px"
+        borderWidth="0.0625em"
+        borderRadius="0.625em"
         overflow="hidden"
         w="90%"
-        h="500px"
-        m="20px"
+        h="19em"
+        ml="1em"
+        mr="1em"
       >
         <TableContainer>
           <Center
-            h="110px"
+            h="3.4375em"
             color="Black"
             justifyContent="space-evenly"
-            fontSize="2xl"
+            alignItems="flex-end"
+            fontSize="1em"
+            fontWeight="medium"
           >
             <Button
               borderRadius="50%"
               backgroundColor="white"
-              border="1px lightgrey solid"
-              left="8px"
+              border="0.0625em lightgrey solid"
+              size="xs"
+              left="1.5em"
             >
               &lsaquo;
             </Button>
@@ -50,20 +60,26 @@ const Planning_card = () => {
             <Button
               borderRadius="50%"
               backgroundColor="white"
-              border="1px lightgrey solid"
-              right="8px"
+              border="0.0625em lightgrey solid"
+              size="xs"
+              right="1.5em"
             >
               &rsaquo;
             </Button>
           </Center>
 
-          <Table variant="simple" size="10px" rowGap="10px" display="grid">
+          <Table
+            variant="simple"
+            size="0.625em"
+            display="grid"
+            gridTemplateRows="3em 12.5em"
+          >
             <Thead>
               <Tr
                 h="50px"
                 fontSize="12px"
                 display="grid"
-                gridTemplateColumns="repeat(7,40px)"
+                gridTemplateColumns="repeat(7,30px)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
@@ -96,13 +112,14 @@ const Planning_card = () => {
               h="300px"
               display="grid"
               alignItems="center"
-              gridTemplateRows="repeat(5,50px)"
+              gridTemplateRows="repeat(6,30px)"
             >
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,40px)"
+                gridTemplateColumns="repeat(7,30px)"
                 justifyContent="center"
                 justifyItems="center"
+                alignItems="center"
               >
                 <Td border="none" color="#E5E4E2">
                   27
@@ -122,28 +139,50 @@ const Planning_card = () => {
                 <Td border="none" color="#E5E4E2">
                   1
                 </Td>
-                <Td border="none">2</Td>
+                <Td border="none">
+                  <Circle size="2em" backgroundColor="#319795" color="white">
+                    2
+                  </Circle>
+                </Td>
               </Tr>
 
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,40px)"
+                gridTemplateColumns="repeat(7,30px)"
                 justifyContent="center"
                 justifyItems="center"
+                alignItems="center"
               >
-                <Td border="none">3</Td>
-                <Td border="none">4</Td>
-                <Td border="none">5</Td>
-                <Td border="none">6</Td>
+                <Td border="none">
+                  <Circle size="2em" backgroundColor="#319795" color="white">
+                    3
+                  </Circle>
+                </Td>
+                <Td border="none">
+                  <Circle size="2em" backgroundColor="#319795" color="white">
+                    4
+                  </Circle>
+                </Td>
+                <Td border="none">
+                  <Circle size="2em" backgroundColor="#319795" color="white">
+                    5
+                  </Circle>
+                </Td>
+                <Td border="none">
+                  <Circle size="2em" backgroundColor="#319795" color="white">
+                    6
+                  </Circle>
+                </Td>
                 <Td border="none">7</Td>
                 <Td border="none">8</Td>
                 <Td border="none">9</Td>
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,40px)"
+                gridTemplateColumns="repeat(7,30px)"
                 justifyContent="center"
                 justifyItems="center"
+                alignItems="center"
               >
                 <Td border="none">10</Td>
                 <Td border="none">11</Td>
@@ -155,9 +194,10 @@ const Planning_card = () => {
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,40px)"
+                gridTemplateColumns="repeat(7,30px)"
                 justifyContent="center"
                 justifyItems="center"
+                alignItems="center"
               >
                 <Td border="none">17</Td>
                 <Td border="none">18</Td>
@@ -171,10 +211,10 @@ const Planning_card = () => {
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,40px)"
+                gridTemplateColumns="repeat(7,30px)"
                 justifyContent="center"
                 justifyItems="center"
-                gap="10px 0"
+                alignItems="center"
               >
                 <Td border="none" color="#E5E4E2">
                   24
@@ -194,10 +234,10 @@ const Planning_card = () => {
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,40px)"
+                gridTemplateColumns="repeat(7,30px)"
                 justifyContent="center"
                 justifyItems="center"
-                gap="10px 0"
+                alignItems="center"
               >
                 <Td border="none">31</Td>
                 <Td border="none" color="#A8A9A8">
