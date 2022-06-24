@@ -3,14 +3,18 @@ import { Flex, Heading, Container } from '@chakra-ui/react'
 import { fetchApi } from '../lib/api'
 import "swiper/css/bundle";
 import TabBarProfileSettings from '../components/TabBarProfileSettings';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCardSearch from '../components/ProjectCardSearch';
+import ProjectCardProfile from '../components/ProjectCardProfile';
 
 
-const Home = ({ users }) => {
+const Home = () => {
 
 	return (
 		<div>
-			<ProjectCard />
+			<ProjectCardProfile />
+			<br />
+			<br />
+			<ProjectCardSearch />
 			<br />
 			<br />
 			<TabBarProfileSettings />

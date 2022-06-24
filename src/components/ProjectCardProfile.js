@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import { Box, Badge, StarIcon, Text, Flex, Spacer } from '@chakra-ui/react'
 import ProjectCardSwiper from "./ProjectCardSwiper";
 
-const ProjectCard = () => {
+const ProjectCardProfile = () => {
 	const project = {
 		title: 'Bibliothèque',
 		description: 'Fabrication et pose d’une bibliothèque en ébène du gabon et valchromat noir et gris. Pose de miroirs 6mm classe 4. Travail réalisé avec CréaArchitecture.',
@@ -48,4 +48,4 @@ const ProjectCard = () => {
 	)
 };
 
-export default ProjectCard;
+export default ProjectCardProfile;
