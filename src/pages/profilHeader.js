@@ -52,6 +52,7 @@ const ProfilBanner = () => {
             w={{ base: "28px", sm: "40px", md: "50px" }}
             h={{ base: "28px", sm: "40px", md: "50px" }}
             size={{ base: "sm", sm: "md", md: "xl" }}
+            fontSize={{ base: "16px", md: "20px", lg: "25px" }}
             variant="outline"
             colorScheme="teal"
             mr="10px"
@@ -63,6 +64,7 @@ const ProfilBanner = () => {
             w={{ base: "28px", sm: "40px", md: "50px" }}
             h={{ base: "28px", sm: "40px", md: "50px" }}
             size={{ base: "sm", sm: "sm", md: "xl" }}
+            fontSize={{ base: "16px", md: "20px", lg: "25px" }}
             variant="outline"
             colorScheme="teal"
             mr="10px"
@@ -77,19 +79,19 @@ const ProfilBanner = () => {
           Tic-Tac
         </Heading>
         <Text
-          fontSize={{ base: "12px", md: "16px", lg: "18px" }}
+          fontSize={{ base: "12px", sm: "16px", md: "18px" }}
           ml="16px"
           mt="10px"
           mr="16px"
         >
           Tic-Tac, c’est mon rêve d’enfant. Fan de bricolage avant même de
           savoir marcher, formé à l’école Boulle, je travaille le bois depuis 7
-          ans déjà.
+          ans déjà...
           <Button
             fontWeight="bold"
             variant="ghost"
             h="10px"
-            fontSize="12px"
+            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
             m="0px"
             p="0px"
             marginLeft="2px"
