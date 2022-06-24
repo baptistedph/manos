@@ -9,17 +9,29 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+<<<<<<< HEAD
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
+=======
+  Flex,
+} from "@chakra-ui/react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
+import { faShareNodes } from "@fortawesome/free-solid-svg-icons"
+>>>>>>> refs/remotes/origin/fabien
 
 const ProfilBanner = () => {
   const prop = {
     profilImage: "/assets/terrassebois1.jpeg",
     altprop: "belle terrasse en bois de mes couilles",
     profilName: "Tic-Tac Bois",
+<<<<<<< HEAD
   };
+=======
+  }
+>>>>>>> refs/remotes/origin/fabien
   return (
     <Box
       w="23.438rem"
@@ -42,7 +54,12 @@ const ProfilBanner = () => {
         alt="Dan Abramov"
         position="absolute"
         bottom="210px"
+<<<<<<< HEAD
         ml="16px"
+=======
+        ml={4}
+        mb={5}
+>>>>>>> refs/remotes/origin/fabien
         w="90px"
         h="90px"
         objectFit="cover"
@@ -92,6 +109,7 @@ const ProfilBanner = () => {
           </Button>
         </Text>
       </Box>
+<<<<<<< HEAD
       <Tabs variant="line" colorScheme="teal">
         <TabList color="teal">
           <Tab>Projet</Tab>
@@ -120,3 +138,35 @@ const ProfilBanner = () => {
 };
 
 export default ProfilBanner;
+=======
+      <Flex align="center" justify="center" mt={5}>
+        <Tabs variant="line" colorScheme="teal">
+          <TabList color="teal">
+            <Tab>Projet</Tab>
+            <Tab>Planning</Tab>
+            <Tab>Contact</Tab>
+            <Tab>Réseau</Tab>
+          </TabList>
+
+          <TabPanels>
+            <TabPanel>
+              <p>one!</p>
+            </TabPanel>
+            <TabPanel>
+              <p>two!</p>
+            </TabPanel>
+            <TabPanel>
+              <p>three!</p>
+            </TabPanel>
+            <TabPanel>
+              <p>four!</p>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Flex>
+    </Box>
+  )
+}
+
+export default ProfilBanner
+>>>>>>> refs/remotes/origin/fabien
