@@ -39,7 +39,7 @@ class User {
     $values = array_values($body);
 
     foreach($keys as $key) {
-      if(!in_array($key, ['first_name', 'last_name', 'company', 'email', 'password', 'profile_picture', 'bio', 'localisation', 'phone', 'street', 'post_code', 'city', 'banner'])) {
+      if(!in_array($key, ['first_name', 'last_name', 'company', 'email', 'password', 'profile_picture', 'bio', 'localisation', 'phone', 'street', 'post_code', 'city', 'banner', 'job'])) {
         return json_encode([
           "success" => false,
           "error" => "Champ invalide"

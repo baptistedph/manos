@@ -24,7 +24,7 @@ function upload_files($param) {
     }
     
     // if picture is too big
-    if ($_FILES["$param"]["size"] > 500000) {
+    if ($_FILES["$param"]["size"] > 5000000) {
         return json_encode([
             "success" => false,
             "message" => "Image trop volumineuse"
