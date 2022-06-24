@@ -8,6 +8,7 @@ import TabBarProfileSettings from '../components/TabBarProfileSettings';
 import ProjectCardSearch from '../components/ProjectCardSearch';
 import ProjectCardProfile from '../components/ProjectCardProfile';
 import ProjectCard from '../components/ProjectCard'
+import Project from '../components/project'
 
 // export const getServerSideProps = async ({ req }) => {
 //   
@@ -24,8 +25,8 @@ import ProjectCard from '../components/ProjectCard'
 const Home = ({ users }) => {
   
 	return (
-		<div>
-      <Result />
+		<div className='body'>
+      		<Project_page />
 		</div>
 	)
 }

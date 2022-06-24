@@ -18,6 +18,7 @@ const Project = () => {
       <Box
         ml="1em"
         mt="1.5em"
+        maxW="23.438em"
         p={0}
       >
       <h2 style={{fontSize:1 + "em", marginTop:1.25 + "em", marginBottom:0.5 + 'em',fontWeight:'bold'}} >Autre projet</h2>
@@ -45,7 +46,7 @@ const Project = () => {
           <img src={img} alt='img'/>
           {name}
         </SwiperSlide>
-        
+
         <SwiperSlide className="projectSlide">
           <img src={img} alt='img'/>
           {name}
