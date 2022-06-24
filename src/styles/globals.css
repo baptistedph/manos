@@ -11,13 +11,13 @@
 	padding: 1.25em;
 }
 
-.project_swiper_img {
+.projectSwiperImg {
 	height: 13.438em;
 	width: 100%;
 	object-fit: cover;
 }
 
-.swiper-pagination {
+.ProjectCardSearchPicsSwiper>.swiper-pagination {
 	/* I used px here when em didn't work */
 
 	/* settings for the numbers inside the badge */
@@ -39,25 +39,25 @@
 
 
 
-#projectTitle {
+#projectCardTitle {
 	font-weight: bold;
 	font-size: 1em;
 	margin-bottom: 0.75em;
 }
 
-.projectSubTitle {
+.projectCardSecondaryTitle {
 	font-weight: bold;
 	font-size: 1em;
 	margin-bottom: 0.25em;
 }
 
-#projectDescription {
+#projectCardDescription {
 	font-weight: bold;
 	font-size: 0.875em;
 	color: #94A3B8;
 }
 
-.projectTextInfo {
+.projectCardTextInfo {
 	font-weight: bold;
 	font-size: 0.875em;
 	color: #94A3B8;

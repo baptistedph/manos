@@ -17,12 +17,12 @@ const ProjectCardSearchPicsSwiper = () => {
 						type: "fraction",
 					}}
 					modules={[Pagination]}
-					className="mySwiper"
+					className="ProjectCardSearchPicsSwiper"
 				>
 					{/* after testing with pictures of different sizes, it appears the width is fix. */}
-					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img1.jpg" alt="bibliothèque ébène" className="project_swiper_img" /></SwiperSlide>
-					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img2.jpg" alt="miroirs 1/2" className="project_swiper_img" /></SwiperSlide>
-					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img3.jpg" alt="miroirs 2/2" className="project_swiper_img" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img1.jpg" alt="bibliothèque ébène" className="projectSwiperImg" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img2.jpg" alt="miroirs 1/2" className="projectSwiperImg" /></SwiperSlide>
+					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img3.jpg" alt="miroirs 2/2" className="projectSwiperImg" /></SwiperSlide>
 				</Swiper>
 			</>
 		</div>

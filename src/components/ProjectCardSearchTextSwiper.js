@@ -5,9 +5,7 @@ import { Box, Badge, StarIcon, Text, Flex, Spacer } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination } from "swiper";
 
 const ProjectCardSearchTextSwiper = () => {
 	const project = {
@@ -21,25 +19,19 @@ const ProjectCardSearchTextSwiper = () => {
 	return (
 		<div>
 			<>
-				<Swiper
-					pagination={{
-						type: "fraction",
-					}}
-					modules={[Pagination]}
-					className="textSwiper"
-				>
+				<Swiper>
 					{/* after testing with pictures of different sizes, it appears the width is fix. */}
 					<SwiperSlide className="project_swiper_slide">
 						<Box className='projectInfo'>
 							<Flex direction='column'>
-								<Box id='projectTitle'
+								<Box id='projectCardTitle'
 									noOfLines={1}
 								>
 									{project.title}
 								</Box>
 								<Spacer />
 								<Box
-									id='projectDescription'
+									id='projectCardDescription'
 								>
 									{project.description}
 								</Box>
@@ -51,28 +43,28 @@ const ProjectCardSearchTextSwiper = () => {
 							<Flex alignItems='baseline' justifyContent='space-between'>
 								<Flex direction='column'>
 									<Box
-										className='projectSubTitle'
+										className='projectCardSecondaryTitle'
 										noOfLines={1}
 									>
 										Localisation
 									</Box>
 									<Spacer />
 									<Box
-										className='projectTextInfo'
+										className='projectCardTextInfo'
 									>
 										{project.location}
 									</Box>
 								</Flex>
 								<Flex direction='column'>
 									<Box
-										className='projectSubTitle'
+										className='projectCardSecondaryTitle'
 										noOfLines={1}
 									>
 										Coût du projet
 									</Box>
 									<Spacer />
 									<Box
-										className='projectTextInfo'
+										className='projectCardTextInfo'
 									>
 										{project.cost}
 									</Box>
@@ -80,14 +72,14 @@ const ProjectCardSearchTextSwiper = () => {
 							</Flex>
 							<Flex direction='column'>
 								<Box
-									className='projectSubTitle'
+									className='projectCardSecondaryTitle'
 									noOfLines={1}
 								>
 									Année de réalisation
 								</Box>
 								<Spacer />
 								<Box
-									className='projectTextInfo'
+									className='projectCardTextInfo'
 								>
 									{project.year}
 								</Box>
