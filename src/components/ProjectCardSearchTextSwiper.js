@@ -22,16 +22,16 @@ const ProjectCardSearchTextSwiper = () => {
 				<Swiper>
 					{/* after testing with pictures of different sizes, it appears the width is fix. */}
 					<SwiperSlide className="project_swiper_slide">
-						<Box className='projectInfo'>
+						<Box className='projectCardSearchInfo'>
 							<Flex direction='column'>
-								<Box id='projectCardTitle'
+								<Box id='projectCardSearchTitle'
 									noOfLines={1}
 								>
 									{project.title}
 								</Box>
 								<Spacer />
 								<Box
-									id='projectCardDescription'
+									id='projectCardSearchDescription'
 								>
 									{project.description}
 								</Box>
@@ -39,32 +39,32 @@ const ProjectCardSearchTextSwiper = () => {
 						</Box>
 					</SwiperSlide>
 					<SwiperSlide className="project_swiper_slide">
-						<Box className='projectInfo'>
+						<Box className='projectCardSearchInfo'>
 							<Flex alignItems='baseline' justifyContent='space-between'>
 								<Flex direction='column'>
 									<Box
-										className='projectCardSecondaryTitle'
+										className='projectCardSearchSecondaryTitle'
 										noOfLines={1}
 									>
 										Localisation
 									</Box>
 									<Spacer />
 									<Box
-										className='projectCardTextInfo'
+										className='projectCardSearchTextInfo'
 									>
 										{project.location}
 									</Box>
 								</Flex>
 								<Flex direction='column'>
 									<Box
-										className='projectCardSecondaryTitle'
+										className='projectCardSearchSecondaryTitle'
 										noOfLines={1}
 									>
 										Coût du projet
 									</Box>
 									<Spacer />
 									<Box
-										className='projectCardTextInfo'
+										className='projectCardSearchTextInfo'
 									>
 										{project.cost}
 									</Box>
@@ -72,14 +72,14 @@ const ProjectCardSearchTextSwiper = () => {
 							</Flex>
 							<Flex direction='column'>
 								<Box
-									className='projectCardSecondaryTitle'
+									className='projectCardSearchSecondaryTitle'
 									noOfLines={1}
 								>
 									Année de réalisation
 								</Box>
 								<Spacer />
 								<Box
-									className='projectCardTextInfo'
+									className='projectCardSearchTextInfo'
 								>
 									{project.year}
 								</Box>
