@@ -5,7 +5,10 @@ import Result from '../components/result'
 import Colab from '../components/colab'
 import Project from '../components/project'
 import Project_page from './project-page'
-import ProjectCardProfile from '../components/ProjectCardProfile'
+import "swiper/css/bundle";
+import TabBarProfileSettings from '../components/TabBarProfileSettings';
+import ProjectCardSearch from '../components/ProjectCardSearch';
+import ProjectCardProfile from '../components/ProjectCardProfile';
 
 // export const getServerSideProps = async ({ req }) => {
 //   
@@ -21,10 +24,11 @@ import ProjectCardProfile from '../components/ProjectCardProfile'
 
 const Home = ({ users }) => {
   
-  return (
-    <ProjectCardProfile />
-    
-  )
+	return (
+		<div>
+      <Project_page />
+		</div>
+	)
 }
 
 export default Home

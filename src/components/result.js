@@ -30,7 +30,7 @@ const Result = () => {
       type: "fraction",
       }}
       modules={[Pagination]}
-      className="mySwiper"    
+      className="resultSwiper"    
     >
       <SwiperSlide> <img src='https://image.but.fr/is/image/but/BESS_Fiche_Cuisine1_GV_574x542?scl=1&qlt=90' id="result"/> </SwiperSlide>
       <SwiperSlide><img src="https://www.deco.fr/sites/default/files/styles/full_1200x630/public/2021-02/Les%20de%CC%81tails%20qui%20font%20la%20cuisine%20en%202021.jpg?itok=NKVsNjgr" id="result"/></SwiperSlide>

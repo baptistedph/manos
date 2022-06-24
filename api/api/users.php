@@ -17,6 +17,16 @@ if (isset($_GET['userId'])) {
   echo $user->get_all();
 }
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  echo $user->post();
+}
 
+if($_SERVER['REQUEST_METHOD'] == 'PATCH') {
+	$user_id = $_GET['userId'];
+  echo $user->patch($user_id);
+}
 
-
+if($_SERVER['REQUEST_METHOD'] == 'DELETE') {
+	$project_id = $_GET['projectId'];
+  echo $project->delete($project_id);
+}
