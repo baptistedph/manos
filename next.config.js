@@ -6,6 +6,9 @@ const nextConfig = {
   pwa: {
     dest: 'public',
   },
+  images: {
+    domains: ['thispersondoesnotexist.com'],
+  },
 }
 
 module.exports = withPWA(nextConfig)

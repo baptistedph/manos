@@ -1,10 +1,11 @@
 import UsersTable from '../components/UsersTable'
-import { Flex, Heading, Container } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { fetchApi } from '../lib/api'
+import DefaultLayout from '../layouts/DefaultLayout'
+import SearchLayout from '../layouts/SearchLayout'
+import CategoriesSwiper from '../components/shared/CategoriesSwiper'
 
 export const getServerSideProps = async ({ req }) => {
-  console.log(req)
-
   const users = await fetchApi('/users')
 
   return {
@@ -15,15 +16,25 @@ export const getServerSideProps = async ({ req }) => {
 }
 
 const Home = ({ users }) => {
-  console.log(users)
-
   return (
-    <Flex justifyContent="center" alignItems="center" h="100vh">
-      <Container maxW="4xl">
-        <Heading>Users</Heading>
-        <UsersTable users={users} />
-      </Container>
+    <Flex mt={5} flexDirection="column" gap={5}>
+      <CategoriesSwiper
+        title="Métiers"
+        categories={['Menuisier', 'Charpentier', 'Peintre', 'Plaquiste']}
+      />
+      <CategoriesSwiper
+        title="Projets"
+        categories={['Cuisines', 'Salles de bain', 'Escaliers', 'Verranda']}
+      />
     </Flex>
+  )
+}
+
+Home.getLayout = page => {
+  return (
+    <DefaultLayout>
+      <SearchLayout>{page}</SearchLayout>
+    </DefaultLayout>
   )
 }
 
