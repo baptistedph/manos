@@ -18,13 +18,25 @@
 }
 
 .swiper-pagination {
-	margin-left: 17em;
-	margin-bottom: 10.5em;
-	max-width: 3.125em;
+	/* I used px here when em didn't work */
+
+	/* settings for the numbers inside the badge */
+	font-size: 0.625em;
+	max-width: 40px;
+	height: 23px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: white;
+
+	/* settings for the badge itself */
+	margin-left: 289px;
+	margin-bottom: 170px;
+	/* max-width: 3.125em; */
 	background-color: #FFFFFF66;
 	border-radius: 1.25em;
 }
+
 
 
 #projectTitle {
@@ -38,8 +50,6 @@
 	font-size: 1em;
 	margin-bottom: 0.25em;
 }
-
-
 
 #projectDescription {
 	font-weight: bold;
