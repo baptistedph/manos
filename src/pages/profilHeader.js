@@ -9,6 +9,7 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Flex,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -92,29 +93,31 @@ const ProfilBanner = () => {
           </Button>
         </Text>
       </Box>
-      <Tabs variant="line" colorScheme="teal">
-        <TabList color="teal">
-          <Tab>Projet</Tab>
-          <Tab>Planning</Tab>
-          <Tab>Contact</Tab>
-          <Tab>Réseau</Tab>
-        </TabList>
+      <Flex align="center" justify="center" mt={5}>
+        <Tabs variant="line" colorScheme="teal">
+          <TabList color="teal">
+            <Tab>Projet</Tab>
+            <Tab>Planning</Tab>
+            <Tab>Contact</Tab>
+            <Tab>Réseau</Tab>
+          </TabList>
 
-        <TabPanels>
-          <TabPanel>
-            <p>one!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>two!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>three!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>four!</p>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+          <TabPanels>
+            <TabPanel>
+              <p>one!</p>
+            </TabPanel>
+            <TabPanel>
+              <p>two!</p>
+            </TabPanel>
+            <TabPanel>
+              <p>three!</p>
+            </TabPanel>
+            <TabPanel>
+              <p>four!</p>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Flex>
     </Box>
   );
 };
