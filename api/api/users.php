@@ -10,11 +10,16 @@ $db = $database->connect();
 
 $user = new User($db);
 
-if (isset($_GET['userId'])) {
-  $user_id = $_GET['userId'];
-  echo $user->get_single($user_id);
-} else {
-  echo $user->get_all();
+if ($_SERVER["REQUEST_METHOD"] === "GET"){
+  if (isset($_GET['userId'])) {
+    $user_id = $_GET['userId'];
+    echo $user->get_single($user_id);
+  } else if (isset($_GET['job'])) {
+    $job = $_GET['job'];
+    echo $user->filter_by($job);
+  } else {
+    echo $user->get_all();
+  }
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
