@@ -8,18 +8,19 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
+import { Box } from "@chakra-ui/react";
 
 const Project = () => {
     return ( 
-      <>
-      <h2>Autre projet</h2>
+      <Box
+        ml="1em"
+        mt="1.5em"
+        p={0}
+      >
+      <h2 style={{fontSize:1 + "em", marginTop:1.25 + "em", fontWeight:'bold'}} >Autre projet</h2>
         <Swiper
         slidesPerView={3}
         spaceBetween={10}
-        pagination={{
-            clickable: true,
-        }}
-        height='6.2em'
         modules={[Pagination]}
         className="projectSwiper"
       >
@@ -49,7 +50,7 @@ const Project = () => {
         Slide 6
         </SwiperSlide>
       </Swiper>
-      </>
+      </Box>
      );
 }
  

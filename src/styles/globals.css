@@ -20,25 +20,27 @@
     
 }
 .swiper-pagination{
+    font-size: 0.625em;
+    padding: 0.4em 0em 0.4em 0em;
     max-width: 50px;
     color: white;
     background-color: #FFFFFF66;
     border-radius: 20px;
 }
 .resultSwiper .swiper-pagination{
-    padding: 0.5em 0.8em 0.5em 0.8em;
+    padding: 0em 0.8em 0em 0.8em;
     margin-left: 27em;
     margin-bottom: 17em;
 }
 .ProjectCardSwiper .swiper-pagination{
-    margin-left: 17em;
-    margin-bottom: 10.5em;
+    margin-left: 28em;
+    margin-bottom: 17em;
 }
 .Collabs{
     display: flex;
     flex-direction: row;
     min-width: 375; 
-    overflow: scroll;
+    overflow: scroll hidden;
 }
 .Collabs .Collab{
     width: 2.5em;
@@ -55,10 +57,12 @@
 .projectSwiper{
     font-size: 10px;
     font-weight: bold;
-    height: 6.2em;
 }
 .projectSwiper img{
-    width: 7.6em;
+    margin: 0%;
+    border-radius: 0.375em;
+    height: 6.2em;
+    width: 100%;
 }
 /* styles for ProjectCard & ProjectCardSwiper */
 .projectInfo {
@@ -66,7 +70,8 @@
 }
 
 .project_swiper_img {
-	height: 13.438em;
+    border-radius: 0.375em;
+	height: 13.5em;
 	width: 100%;
 	object-fit: cover;
 }
