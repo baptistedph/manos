@@ -1,6 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 
-const Category = () => {
+const Category = ({ name, picture }) => {
   const property = {
     imageAlt: "Rear view of modern home with pool",
   };
@@ -16,7 +16,7 @@ const Category = () => {
         mr="0.625em"
       >
         <Image
-          src="./assets/job_pics/large-home-g4446d6391_1280.jpg"
+          src={`./assets/job_pics/${picture}`}
           height="4.5em"
           width="7.625em"
           alt={property.imageAlt}
@@ -29,7 +29,7 @@ const Category = () => {
           height="1.6875em"
         >
           <Text fontSize="0.625em" fontWeight="bold">
-            Architecte
+            {name}
           </Text>
         </Box>
       </Box>

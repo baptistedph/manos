@@ -6,6 +6,8 @@ import Planning_card from "../components/Planning_card";
 import Category from "../components/Category";
 import Settings_card from "../components/Settings_card";
 import Network from "../components/Network";
+import Category_swiper_jobs from "../components/Category_swiper_jobs";
+import Category_swiper_type from "../components/Category_swiper_type";
 
 // export const getServerSideProps = async ({ req }) => {
 //   const users = await fetchApi("/users");
@@ -19,7 +21,9 @@ import Network from "../components/Network";
 
 const Home = ({ users }) => {
   return (
-    <Category />
+    <div>
+      <Planning_card />
+    </div>
     // <Flex
     //   alignItems="center"
     //   flexDirection="column"

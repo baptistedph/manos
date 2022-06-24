@@ -74,7 +74,7 @@ const Planning_card = () => {
             display="grid"
             gridTemplateRows="3em 12.5em"
           >
-            <Thead>
+            <Thead className="planning_thead">
               <Tr
                 h="50px"
                 fontSize="12px"
@@ -109,6 +109,7 @@ const Planning_card = () => {
             </Thead>
 
             <Tbody
+              className="planning_tbody"
               h="300px"
               display="grid"
               alignItems="center"

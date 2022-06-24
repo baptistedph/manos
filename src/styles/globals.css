@@ -3,11 +3,47 @@
     justify-content: space-between;
 }
 
-tbody > tr > td {
+.planning_tbody > tr > td {
     font-weight:bold;
     font-size: 0.8em
 }
 
-thead > tr > th {
+.planning_thead > tr > th {
     font-size: 0.8em;
 }
+
+
+
+.category_swiper > div > span {
+    background: none;
+    
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1.125em;
+  margin-left: 1em;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+
+  display: block;
+  width: 7.625em;
+  object-fit: cover;
+}
+
