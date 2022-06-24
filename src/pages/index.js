@@ -5,6 +5,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import Planning_card from "../components/Planning_card";
 import Category from "../components/Category";
 import Settings_card from "../components/Settings_card";
+import Network from "../components/Network";
 
 // export const getServerSideProps = async ({ req }) => {
 //   const users = await fetchApi("/users");
@@ -18,7 +19,7 @@ import Settings_card from "../components/Settings_card";
 
 const Home = ({ users }) => {
   return (
-    <Planning_card />
+    <Category />
     // <Flex
     //   alignItems="center"
     //   flexDirection="column"

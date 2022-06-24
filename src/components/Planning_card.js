@@ -79,7 +79,7 @@ const Planning_card = () => {
                 h="50px"
                 fontSize="12px"
                 display="grid"
-                gridTemplateColumns="repeat(7,30px)"
+                gridTemplateColumns="repeat(7,2.525em)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
@@ -112,11 +112,12 @@ const Planning_card = () => {
               h="300px"
               display="grid"
               alignItems="center"
-              gridTemplateRows="repeat(6,30px)"
+              gridTemplateRows="repeat(6,1.875em)"
+              // 2.525em
             >
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,30px)"
+                gridTemplateColumns="repeat(7,1.875em)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
@@ -148,7 +149,7 @@ const Planning_card = () => {
 
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,30px)"
+                gridTemplateColumns="repeat(7,1.875em)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
@@ -179,7 +180,7 @@ const Planning_card = () => {
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,30px)"
+                gridTemplateColumns="repeat(7,1.875em)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
@@ -194,7 +195,7 @@ const Planning_card = () => {
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,30px)"
+                gridTemplateColumns="repeat(7,1.875em)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
@@ -211,7 +212,7 @@ const Planning_card = () => {
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,30px)"
+                gridTemplateColumns="repeat(7,1.875em)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
@@ -234,7 +235,7 @@ const Planning_card = () => {
               </Tr>
               <Tr
                 display="grid"
-                gridTemplateColumns="repeat(7,30px)"
+                gridTemplateColumns="repeat(7,1.875em)"
                 justifyContent="center"
                 justifyItems="center"
                 alignItems="center"
