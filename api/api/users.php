@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET"){
     echo $user->get_single($user_id);
   } else if (isset($_GET['job'])) {
     $job = $_GET['job'];
-    echo $user->filter_by($job);
+    echo $user->filter_by_jobs($job);
   } else {
     echo $user->get_all();
   }

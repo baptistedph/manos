@@ -104,13 +104,34 @@ class User {
   }
 
   public function filter_by_jobs($job) {
-    $query = "SELECT * FROM `users` WHERE `jobs` = :job";
+  $query =  "SELECT *, pictures_name
+    FROM users 
+    LEFT JOIN (
+        SELECT project_pictures.user_id, substring_index(GROUP_CONCAT(DISTINCT project_pictures.name SEPARATOR ','), ',', 3) AS pictures_name 
+        FROM projects 
+        JOIN project_pictures ON projects.uuid = project_pictures.uuid
+        GROUP BY project_pictures.user_id
+    ) projects ON projects.user_id = users.id
+    WHERE `job` = :job";
+    // $query = "SELECT * FROM `users` WHERE `jobs` = :job";
 
     $stmt = $this->conn->prepare($query);
     $stmt->execute([
       ":job" => $job
     ]);
 
-    return json_encode(["success" => true]);
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+    for ($i = 0; $i < count($users); $i++){
+      if ($users[$i]["pictures_name"] != NULL) {
+        $users[$i]["pictures_name"] = explode(",", $users[$i]["pictures_name"]);
+        // var_dump($users[$i]["pictures_name"]);
+      }
+    }
+    // var_dump($users);
+    // die();
+
+    return json_encode($users);
   }
 }
