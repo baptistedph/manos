@@ -8,7 +8,7 @@ import Settings_card from "../components/Settings_card";
 import Network from "../components/Network";
 import Category_swiper_jobs from "../components/Category_swiper_jobs";
 import Category_swiper_type from "../components/Category_swiper_type";
-
+import { Box } from "@chakra-ui/react";
 // export const getServerSideProps = async ({ req }) => {
 //   const users = await fetchApi("/users");
 
@@ -21,9 +21,11 @@ import Category_swiper_type from "../components/Category_swiper_type";
 
 const Home = ({ users }) => {
   return (
-    <div>
+    <Box>
+      <Category_swiper_jobs />
+      <Category_swiper_type />
       <Planning_card />
-    </div>
+    </Box>
     // <Flex
     //   alignItems="center"
     //   flexDirection="column"

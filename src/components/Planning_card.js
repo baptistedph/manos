@@ -19,7 +19,7 @@ import { Grid, GridItem } from "@chakra-ui/react";
 
 const Planning_card = () => {
   return (
-    <div>
+    <Box maxWidth="23.4375em">
       <Text
         fontSize="0.875em"
         ml="1em"
@@ -265,7 +265,7 @@ const Planning_card = () => {
           </Table>
         </TableContainer>
       </Box>
-    </div>
+    </Box>
   );
 };
 

@@ -11,7 +11,7 @@ import Category from "./Category";
 
 const Category_swiper_jobs = () => {
   return (
-    <Box mt="1.875em">
+    <Box mt="1.875em" maxWidth="23.4375em">
       <Text ml="1em" fontWeight="bold" fontSize="0.875em">
         Métiers
       </Text>
