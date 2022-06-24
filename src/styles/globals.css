@@ -1,6 +1,8 @@
 /* styles for ProjectCard & ProjectCardSwiper */
+
 .projectInfo {
 	background-color: white;
+	padding: 20px;
 }
 
 .project_swiper_img {
@@ -26,25 +28,30 @@
 	border-radius: 1.25em;
 }
 
-/* styles for TabBarProfileSetting */
-.tabProfileSetting {
-	width: 6.813em;
-	height: 2.125em;
-	background-color: #E2E8F0;
-	border-radius: 0.25em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+#projectTitle {
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 12px;
 }
 
-.tabBarProfileSetting {
-	width: 21.438em;
-	height: 2.875em;
-	background-color: #F1F5F9;
-	border-radius: 0.25em;
-	display: flex;
-	direction: row;
-	justify-content: space-around;
-	align-items: center;
+.projectSubTitle {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 4px;
+}
 
+
+
+#projectDescription {
+	font-weight: bold;
+	font-size: 14px;
+	color: #94A3B8;
+}
+
+.projectTextInfo {
+	font-weight: bold;
+	font-size: 12px;
+	color: #94A3B8;
+	margin-bottom: 12px;
 }
