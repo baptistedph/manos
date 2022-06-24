@@ -17,14 +17,6 @@
 	object-fit: cover;
 }
 
-.swiper-button-prev::after {
-	color: #319795;
-}
-
-.swiper-button-next::after {
-	color: #319795;
-}
-
 .swiper-pagination {
 	margin-left: 17em;
 	margin-bottom: 10.5em;
