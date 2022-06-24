@@ -1,0 +1,13 @@
+.chevron > span {
+    display:flex;
+    justify-content: space-between;
+}
+
+tbody > tr > td {
+    font-weight:bold;
+    font-size: 0.8em
+}
+
+thead > tr > th {
+    font-size: 0.8em;
+}
