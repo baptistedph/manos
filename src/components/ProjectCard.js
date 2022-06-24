@@ -67,7 +67,7 @@ const ProjectCard = () => {
   >
     <Box as='button' borderRadius='md' bg='#319795' w='18.75em' h='2.5em' m='0' color='white' display='flex' justifyContent='center' alignItems='center'>
       <img src="./assets/icons/309678.svg" alt="enveloppe" className='spend' />  
-      <div mb='150px' flex={1}> Envoyer un message </div>
+      <div mb='9.375em' flex={1}> Envoyer un message </div>
     </Box>
   </Box>
 </Box>

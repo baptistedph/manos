@@ -11,13 +11,16 @@ import { Pagination } from "swiper";
 import { Box } from "@chakra-ui/react";
 
 const Project = () => {
+  const img = 'https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg'
+  const name= 'Slide'
+  
     return ( 
       <Box
         ml="1em"
         mt="1.5em"
         p={0}
       >
-      <h2 style={{fontSize:1 + "em", marginTop:1.25 + "em", fontWeight:'bold'}} >Autre projet</h2>
+      <h2 style={{fontSize:1 + "em", marginTop:1.25 + "em", marginBottom:0.5 + 'em',fontWeight:'bold'}} >Autre projet</h2>
         <Swiper
         slidesPerView={3}
         spaceBetween={10}
@@ -25,29 +28,32 @@ const Project = () => {
         className="projectSwiper"
       >
         <SwiperSlide className="projectSlide" style={{marginLeft: 1 + "em" }}>
-            <img src='https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg' alt='img'/>
-            Slide 1
-        </SwiperSlide>
-        <SwiperSlide className="projectSlide">
-        <img src='https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg' alt='img'/>
-        Slide 2
+            <img src={img} alt='img'/>
+            {name}
         </SwiperSlide>
 
         <SwiperSlide className="projectSlide">
-        <img src='https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg' alt='img'/>
-        Slide 3
+          <img src={img} alt='img'/>
+          {name}
+        </SwiperSlide>
+
+        <SwiperSlide className="projectSlide">
+          <img src={img} alt='img'/>
+          {name}
         </SwiperSlide>
         <SwiperSlide className="projectSlide">
-        <img src='https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg' alt='img'/>
-        Slide 4
+          <img src={img} alt='img'/>
+          {name}
         </SwiperSlide>
+        
         <SwiperSlide className="projectSlide">
-        <img src='https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg' alt='img'/>
-        Slide 5
+          <img src={img} alt='img'/>
+          {name}
         </SwiperSlide>
+
         <SwiperSlide className="projectSlide">
-        <img src='https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg' alt='img'/>
-        Slide 6
+          <img src={img} alt='img'/>
+          {name}
         </SwiperSlide>
       </Swiper>
       </Box>

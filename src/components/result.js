@@ -9,10 +9,21 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Result = () => {
+    const profile =
+      {
+        img:'https://image.but.fr/is/image/but/BESS_Fiche_Cuisine1_GV_574x542?scl=1&qlt=90',
+        profilePic:'./assets/pictures/profile.jpg',
+        name: 'Tic-Tac',
+        work:'Menuisier',
+        where:'Paris XIII',
+        service:"Découpe de bois, sculture, peinture"
+
+      }
+    
     return ( 
         <Box
-          borderRadius='6pt'
-          border="1px"
+          borderRadius='lg'
+          border="0.063em"
           borderColor='#E2E8F0'
           h={460}
           w={332}
@@ -32,11 +43,11 @@ const Result = () => {
       modules={[Pagination]}
       className="resultSwiper"    
     >
-      <SwiperSlide> <img src='https://image.but.fr/is/image/but/BESS_Fiche_Cuisine1_GV_574x542?scl=1&qlt=90' id="result"/> </SwiperSlide>
-      <SwiperSlide><img src="https://www.deco.fr/sites/default/files/styles/full_1200x630/public/2021-02/Les%20de%CC%81tails%20qui%20font%20la%20cuisine%20en%202021.jpg?itok=NKVsNjgr" id="result"/></SwiperSlide>
-      <SwiperSlide><img src='https://static.cotemaison.fr/medias_11964/w_600,h_600,c_fill,g_north/v1617543550/la-cuisine-imite-le-bois-a-la-perfection_6125959.jpg' id="result" /></SwiperSlide>
-      <SwiperSlide><img src='https://media.ma.cuisinella/-/media/bynder/cuisinella/2022/01/03/11/16/cla_trend_darwin_pearl_noir_mannequin_2/4x3-cla_trend_darwin_pearl_noir_mannequin_2.ashx?as=1&w=1920&rev=a9fcb57784274ecc8c2ea9fac9d81429&hash=D0DBE98863E13DC47D49B80FEBA644CD' id="result" /></SwiperSlide>
-    </Swiper>
+      <SwiperSlide> <img src={profile.img} id="result"/></SwiperSlide>
+      <SwiperSlide> <img src={profile.img} id="result"/></SwiperSlide>      
+      <SwiperSlide> <img src={profile.img} id="result"/></SwiperSlide>      
+      <SwiperSlide> <img src={profile.img} id="result"/></SwiperSlide>    
+      </Swiper>
   </Box>
   {/* Box 1ère ligne */}
   <Box
@@ -48,7 +59,7 @@ const Result = () => {
         ml= '1em'
         flex={0.5}
         >
-        <img src="./assets/pictures/profile.jpg" alt='profile photo' className="profile"/>
+        <img src={profile.profilePic} alt='profile photo' className="profile"/>
       </Box>
 
       <Box
@@ -60,14 +71,14 @@ const Result = () => {
         overflow='hidden'
         fontSize={16}
       >
-        Tic-tac
+        {profile.name}
       </Box>
       <Box
         mt="1em"
         flex={0.30}
         mr='1em'
       >
-        Menuisiers
+        {profile.work}
       </Box>
   </Box>
 
@@ -83,7 +94,7 @@ const Result = () => {
     color='#94A3B8'
     fontWeight='medium'
     >
-      Paris XIV
+      {profile.where}
     </Badge>
   </Box>
 
@@ -99,7 +110,7 @@ const Result = () => {
       color='#94A3B8'
       fontWeight='medium'
     >
-      Découpe de bois, sculture, peinture
+      {profile.service}
     </Badge>
     
   </Box>
@@ -112,7 +123,7 @@ const Result = () => {
   >
     <Box as='button' borderRadius='md' bg='#319795' w='21em' h='2.5em' m='0' color='white' display='flex' justifyContent='center' alignItems='center'>
       <img src="./assets/icons/309678.svg" alt="enveloppe" className='spend' />  
-      <div mb='150px' flex={1}> Envoyer un message </div>
+      <div mb='9.375em' flex={1}> Envoyer un message </div>
     </Box>
   </Box>
 </Box>

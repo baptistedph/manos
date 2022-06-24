@@ -25,7 +25,7 @@ const Home = ({ users }) => {
   
 	return (
 		<div>
-      <Project_page />
+      <Result />
 		</div>
 	)
 }

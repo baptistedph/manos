@@ -15,7 +15,7 @@ const ProjectCardProfile = () => {
 		<Box
 			w={343}
 			h={370}
-			borderWidth='1px'
+			borderWidth='0.063em'
 			borderRadius='lg'
 			overflow='hidden'
 		>

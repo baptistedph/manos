@@ -15,7 +15,7 @@ const ProjectCardSearch = () => {
 		<Box
 			w={332}
 			h={370}
-			borderWidth='1px'
+			borderWidth='0.063em'
 			borderRadius='lg'
 			overflow='hidden'
 		>
