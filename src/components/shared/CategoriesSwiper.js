@@ -9,11 +9,7 @@ const CategoriesSwiper = ({ title, categories = [] }) => {
     <Flex flexDirection="column" gap={3}>
       <Heading size="sm">{title}</Heading>
       <Box maxW="100%">
-        <Swiper
-          spaceBetween={12}
-          slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={swiper => console.log(swiper)}>
+        <Swiper spaceBetween={12} slidesPerView={3}>
           {categories.map((category, i) => {
             return (
               <SwiperSlide key={i}>

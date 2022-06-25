@@ -4,6 +4,7 @@ import { fetchApi } from '../lib/api'
 import DefaultLayout from '../layouts/DefaultLayout'
 import SearchLayout from '../layouts/SearchLayout'
 import CategoriesSwiper from '../components/shared/CategoriesSwiper'
+import ProfileCard from '../components/shared/ProfileCard'
 
 export const getServerSideProps = async ({ req }) => {
   const users = await fetchApi('/users')
@@ -26,6 +27,7 @@ const Home = ({ users }) => {
         title="Projets"
         categories={['Cuisines', 'Salles de bain', 'Escaliers', 'Verranda']}
       />
+      <ProfileCard />
     </Flex>
   )
 }
