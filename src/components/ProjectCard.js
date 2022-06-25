@@ -14,6 +14,9 @@ const ProjectCard = () => {
         
 
     return ( 
+<Flex
+    justifyContent='center'
+>
     <Box
         mt="1em"
         width='21.438em'
@@ -71,6 +74,7 @@ const ProjectCard = () => {
     </Box>
   </Box>
 </Box>
+</Flex>
      );
 }
  

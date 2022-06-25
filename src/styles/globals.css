@@ -4,8 +4,8 @@
 }
 .body{
     display: flex;
+    
     flex-direction: column;
-    justify-self: center;
 }
 #result {
     width: 100%;
@@ -41,11 +41,7 @@
     margin-left: 28em;
     margin-bottom: 17em;
 }
-.Collabs{
-    display: flex;
-    flex-direction: row;
-    max-width: 22em;
-}
+
 .Collabs{
     max-width: 300px;
 }

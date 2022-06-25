@@ -8,13 +8,16 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 const Project = () => {
   const img = 'https://cache.marieclaire.fr/data/photo/w1200_h630_c17/5o/idees-deco-terrasse.jpg'
   const name= 'Slide'
   
     return ( 
+    <Flex
+    justifyContent='center'
+    >
       <Box
         ml="1em"
         mt="1.5em"
@@ -58,6 +61,7 @@ const Project = () => {
         </SwiperSlide>
       </Swiper>
       </Box>
+      </Flex>
      );
 }
  

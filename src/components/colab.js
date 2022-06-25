@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import "swiper/css";
 import "swiper/css/pagination";
 import React from 'react';
@@ -9,6 +9,9 @@ const Colab = () => {
     const src='./assets/pictures/profile.jpg'
 
     return (
+    <Flex
+    justifyContent='center'
+        >
         <Box
             ml="1em"
             mt="1.5em"
@@ -17,8 +20,8 @@ const Colab = () => {
         >
         <h2 style={{fontSize:1 + "em", marginTop:1.25 + "em", marginBottom:0.5 + 'em' ,fontWeight:'bold'}} >Collaborateur</h2>
         <Swiper
-                slidesPerView={10}
-                spaceBetween={10}
+                slidesPerView={7}
+                spaceBetween={6}
                 modules={[Pagination]}
                 className="Colabs"
         >
@@ -59,6 +62,7 @@ const Colab = () => {
             </SwiperSlide>
             </Swiper>
         </Box>
+    </Flex>
     )           
 }
  
