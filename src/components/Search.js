@@ -20,10 +20,11 @@ import {
   SliderThumb,
   SliderMark,
   Flex,
-} from "@chakra-ui/react";
-import React from "react";
+} from "@chakra-ui/react"
+import React, { useState } from "react"
 
 const Search = () => {
+  const [slideValue, setSlideValue] = useState(10)
   return (
     <Box padding="16px" pt="25px">
       <Input width="343px" height="50px" placeholder="Que cherchez vous ?" />
@@ -61,16 +62,19 @@ const Search = () => {
             fontSize="12px"
             fontWeight="bold"
           >
-            <span color="#94A3B8">0km</span>
+            <span color="#94A3B8">{slideValue}km</span>
           </Flex>
 
           <Slider
             ml="10px"
             mr="20px"
             aria-label="slider-ex-1"
-            defaultValue={30}
+            min={0}
+            max={50}
+            defaultValue={10}
             width="311px"
             height="16px"
+            onChange={(e) => setSlideValue(e)}
           >
             <SliderTrack>
               <SliderFilledTrack />
@@ -106,7 +110,7 @@ const Search = () => {
         </PopoverContent>
       </Popover>
     </Box>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search
