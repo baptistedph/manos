@@ -8,6 +8,8 @@
     font-size: 0.8em
 }
 
+
+
 .planning_thead > tr > th {
     font-size: 0.8em;
 }
@@ -20,7 +22,7 @@
 }
 
 
-.swiper-slide {
+.category_swiper > .swiper-wrapper >  .swiper-slide {
   text-align: center;
   font-size: 1.125em;
   margin-left: 1em;
@@ -40,7 +42,7 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.category_swiper > .swiper-wrapper >  .swiper-slide img {
 
   display: block;
   width: 7.625em;

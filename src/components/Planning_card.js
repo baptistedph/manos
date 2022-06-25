@@ -18,8 +18,11 @@ import { Grid, GridItem } from "@chakra-ui/react";
 // This button will have no right borderRadius
 
 const Planning_card = () => {
+  const toto = () => {
+    console.log("toto");
+  };
   return (
-    <Box maxWidth="23.4375em">
+    <Box maxWidth="23.4375em" onClick={toto}>
       <Text
         fontSize="0.875em"
         ml="1em"
