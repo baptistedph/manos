@@ -10,9 +10,18 @@ class Project {
   }
 
   public function get_all_from_user($user_id) {
-    // $query = "SELECT * FROM $this->project_table WHERE `user_id` = :user_id";
-    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan, project_pictures.id as project_pictures_id, name, project_pictures.uuid as uuid";
-    $query = "SELECT $fields FROM `projects` INNER JOIN `project_pictures` ON projects.uuid = project_pictures.uuid AND projects.user_id = :userId";
+
+    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan, projects.uuid as uuid, pictures_name";
+    
+    $query = "SELECT $fields FROM projects
+      LEFT JOIN(
+        SELECT projects.uuid, project_pictures.user_id, GROUP_CONCAT(DISTINCT project_pictures.name SEPARATOR ',') AS pictures_name
+        FROM projects
+        JOIN project_pictures ON projects.uuid = project_pictures.uuid
+        GROUP BY project_pictures.user_id, projects.uuid
+      ) tmp
+      ON projects.uuid = tmp.uuid
+      WHERE projects.user_id = :userId";
 
     $stmt = $this->conn->prepare($query);
 
@@ -20,14 +29,30 @@ class Project {
 			':userId' => $user_id
     ]);
 
-    return json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+    $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    for ($i = 0; $i < count($projects); $i++){
+      if ($projects[$i]["pictures_name"] != NULL) {
+        $projects[$i]["pictures_name"] = explode(",", $projects[$i]["pictures_name"]);
+      }
+    }
+
+    return json_encode($projects);
   }
 
   public function get_single($project_id) {
 
-    // $query = "SELECT * FROM $this->project_table WHERE `id` = :project_id";
-    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan, project_pictures.id as project_pictures_id, name, project_pictures.uuid as uuid";
-    $query = "SELECT $fields FROM `projects` INNER JOIN `project_pictures` ON projects.uuid = project_pictures.uuid AND projects.id = :project_id";
+    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan,  pictures_name, projects.uuid";
+
+    $query = "SELECT $fields FROM projects
+      LEFT JOIN(
+        SELECT projects.uuid, project_pictures.user_id, GROUP_CONCAT(DISTINCT project_pictures.name SEPARATOR ',') AS pictures_name
+        FROM projects
+        JOIN project_pictures ON projects.uuid = project_pictures.uuid
+        GROUP BY project_pictures.user_id, projects.uuid
+      ) tmp
+      ON projects.uuid = tmp.uuid
+      WHERE projects.id = :project_id";
 
     $stmt = $this->conn->prepare($query);
 
@@ -35,7 +60,16 @@ class Project {
       ':project_id' => $project_id
     ]);
 
-    return json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+    $project = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    for ($i = 0; $i < count($project); $i++){
+      if ($project[$i]["pictures_name"] != NULL) {
+        $project[$i]["pictures_name"] = explode(",", $project[$i]["pictures_name"]);
+      }
+    }
+
+    return json_encode($project);
+
   }
 
   public function post($uuid) {
