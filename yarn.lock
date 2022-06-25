@@ -1801,10 +1801,10 @@
     "combined-stream" "^1.0.8"
     "mime-types" "^2.1.12"
 
-"framer-motion@^6.3.11", "framer-motion@>=4.0.0":
-  "integrity" "sha512-xQLk+ZSklNs5QNCUmdWPpKMOuWiB8ZETsvcIOWw8xvri9K3TamuifgCI/B6XpaEDR0/V2ZQF2Wm+gUAZrXo+rw=="
-  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-6.3.11.tgz"
-  "version" "6.3.11"
+"framer-motion@^6.3.13", "framer-motion@>=4.0.0":
+  "integrity" "sha512-z6UIxENuqa9bh/xE1fit7IUT+07TKSp81TE+C0DDBe9ly4bdEafpZUbcDZxNiN6UBU5hYdEY7rKhk+X1JlIkhg=="
+  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-6.3.13.tgz"
+  "version" "6.3.13"
   dependencies:
     "framesync" "6.0.1"
     "hey-listen" "^1.0.8"
