@@ -8,22 +8,26 @@ class Calendar {
       $this->conn = $db;
     }
     
-     public function post($user_id, $start_date, $end_date){
-        $query = "INSERT INTO $this->users_table (start_date, end_date) VALUES ($start_date, $end_date) WHERE id = :user_id";
+     public function post(){
+        $body = $_POST;
+        $values = array_values($body);
+        $query = "INSERT INTO $this->calendar_dates_table (`started_at`, `ended_at`, `user_id`) VALUES (?, ?, ?)";
 
         $stmt = $this->conn->prepare($query);
     
-        $stmt->execute();
+        $stmt->execute($values);
     
         return json_encode(["success" => true]);
     }
 
     public function get_all_from_user($user_id) {
-        $query = "SELECT * FROM $this->calendar_dates_table WHERE id = :user_id";
+        $query = "SELECT * FROM $this->calendar_dates_table WHERE `user_id` = :userid ";
 
         $stmt = $this->conn->prepare($query);
     
-        $stmt->execute();
+        $stmt->execute([
+            ":userid" => $user_id
+        ]);
     
         return json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
     }
