@@ -101,7 +101,7 @@ const ProfilBanner = () => {
           </Button>
         </Text>
       </Box>
-      <Flex align="center" justify="center" mt={5}>
+      <Flex align="center" justify="center" mt={5} m="16px">
         <Tabs
           variant="line"
           colorScheme="teal"
