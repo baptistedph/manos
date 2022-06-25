@@ -63,3 +63,15 @@
 	color: #94A3B8;
 	margin-bottom: 0.75em;
 }
+
+/* just to center my components */
+#center_everything {
+	display: flex;
+	direction: column;
+	justify-content: center;
+}
+
+/* responsive */
+/* @media screen {
+	
+} */

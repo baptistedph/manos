@@ -8,9 +8,8 @@ import ProjectCardSearch from '../components/ProjectCardSearch';
 const Home = () => {
 
 	return (
-		<div>
+		<div id='center_everything'>
 			<ProjectCardSearch />
-
 		</div>
 	)
 }
