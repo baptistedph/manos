@@ -29,7 +29,12 @@ const Search = () => {
       <Input width="343px" height="50px" placeholder="Que cherchez vous ?" />
       <Popover placement="bottom-start">
         <PopoverTrigger>
-          <Button border="1px solid #E2E8F0" bgColor="#ffff" mt="12px">
+          <Button
+            border="1px solid #E2E8F0"
+            bgColor="#ffff"
+            mt="12px"
+            color="#94A3B8"
+          >
             Localisation
           </Button>
         </PopoverTrigger>
@@ -56,8 +61,7 @@ const Search = () => {
             fontSize="12px"
             fontWeight="bold"
           >
-            <span>0km</span>
-            <span>100km</span>
+            <span color="#94A3B8">0km</span>
           </Flex>
 
           <Slider
@@ -80,38 +84,25 @@ const Search = () => {
 
       <Popover>
         <PopoverTrigger>
-          <Button border="1px solid #E2E8F0" bgColor="#ffff" mt="12px">
+          <Button
+            border="1px solid #E2E8F0"
+            bgColor="#ffff"
+            mt="12px"
+            color="#94A3B8"
+          >
             Budget
           </Button>
         </PopoverTrigger>
-        <PopoverContent width="344px" height="80px">
+        <PopoverContent width="344px" height="110px">
           <PopoverArrow />
           <PopoverCloseButton />
-          <Flex
-            justify="space-between"
-            ml="16px"
-            mr="16px"
-            mt="30px"
-            fontSize="12px"
-            fontWeight="bold"
-          >
-            <span>0€</span>
-            <span>100€</span>
+          <PopoverBody>
+            <p>Veuillez indiquer votre budget :</p>
+          </PopoverBody>
+          <Flex ml="10px" mr="16px" mt="10px" justifyContent="space-between">
+            <Input placeholder="Min €" />
+            <Input placeholder="Max €" ml="12px" />
           </Flex>
-
-          <RangeSlider
-            aria-label={["min", "max"]}
-            defaultValue={[10, 30]}
-            width="315px"
-            mr="10px"
-            ml="10px"
-          >
-            <RangeSliderTrack>
-              <RangeSliderFilledTrack />
-            </RangeSliderTrack>
-            <RangeSliderThumb index={0} />
-            <RangeSliderThumb index={1} />
-          </RangeSlider>
         </PopoverContent>
       </Popover>
     </Box>
