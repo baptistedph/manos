@@ -1,43 +1,36 @@
-import UsersTable from '../components/UsersTable'
-import { Flex, Heading, Container } from '@chakra-ui/react'
-import { fetchApi } from '../lib/api'
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import UsersTable from "../components/UsersTable";
+import { Flex, Heading, Container } from "@chakra-ui/react";
+import Contact from "../components/contact";
+import { fetchApi } from "../lib/api";
+import ProfilBanner from "../components/profilHeader";
 
-// export const getServerSideProps = async ({ req }) => {
-//   console.log(req)
+export const getServerSideProps = async ({ req }) => {
+  console.log(req);
 
-//   const users = await fetchApi('/users')
+  const users = await fetchApi("/users");
 
-//   return {
-//     props: {
-//       users,
-//     },
-//   }
-// }
+  return {
+    props: {
+      users,
+    },
+  };
+};
 
 const Home = ({ users }) => {
+  console.log(users);
 
   return (
-    <Tabs colorScheme='green'>
-  <TabList>
-    <Tab>One</Tab>
-    <Tab>Two</Tab>
-    <Tab>Three</Tab>
-  </TabList>
+    <ProfilBanner />
+    // <Flex justifyContent="center" alignItems="center" h="100vh">
+    //   <div>
+    //     <Contact users={users} />
+    //   </div>
+    //   <Container maxW="4xl">
+    //     <Heading>Users</Heading>
+    //     <UsersTable users={users} />
+    //   </Container>
+    // </Flex>
+  );
+};
 
-  <TabPanels>
-    <TabPanel>
-      <p>one!</p>
-    </TabPanel>
-    <TabPanel>
-      <p>two!</p>
-    </TabPanel>
-    <TabPanel>
-      <p>three!</p>
-    </TabPanel>
-  </TabPanels>
-</Tabs>
-  )
-}
-
-export default Home
+export default Home;

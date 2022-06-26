@@ -6,7 +6,7 @@ import {
   Th,
   Td,
   TableContainer,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 
 const UsersTable = ({ users }) => {
   return (
@@ -19,18 +19,18 @@ const UsersTable = ({ users }) => {
           </Tr>
         </Thead>
         <Tbody>
-          {users.map(user => {
+          {users.map((user) => {
             return (
               <Tr key={user.id}>
                 <Td>{user.id}</Td>
                 <Td>{user.name}</Td>
               </Tr>
-            )
+            );
           })}
         </Tbody>
       </Table>
     </TableContainer>
-  )
-}
+  );
+};
 
-export default UsersTable
+export default UsersTable;
