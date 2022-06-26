@@ -9,6 +9,12 @@ import "swiper/css/navigation";
 import { Pagination } from "swiper";
 
 const ProjectCardSearchPicsSwiper = () => {
+	// still got to get those info from de database
+	const PicsList = [
+		{ "source": "./assets/project_card_pics/img1.jpg", "text": "bibliothèque ébène" },
+		{ "source": "./assets/project_card_pics/img2.jpg", "text": "miroirs 1/2" },
+		{ "source": "./assets/project_card_pics/img3.jpg", "text": "miroirs 2/2" }
+	]
 	return (
 		<div>
 			<>
@@ -19,10 +25,8 @@ const ProjectCardSearchPicsSwiper = () => {
 					modules={[Pagination]}
 					className="ProjectCardSearchPicsSwiper"
 				>
-					{/* after testing with pictures of different sizes, it appears the width is fix. */}
-					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img1.jpg" alt="bibliothèque ébène" className="projectCardSearchSwiperImg" /></SwiperSlide>
-					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img2.jpg" alt="miroirs 1/2" className="projectCardSearchSwiperImg" /></SwiperSlide>
-					<SwiperSlide className="project_swiper_slide"><img src="./assets/project_card_pics/img3.jpg" alt="miroirs 2/2" className="projectCardSearchSwiperImg" /></SwiperSlide>
+					{PicsList.map(image => <SwiperSlide className="project_swiper_slide"><img src={image.source} alt={image.text} className="projectCardSearchSwiperImg" /></SwiperSlide>)}
+
 				</Swiper>
 			</>
 		</div>
