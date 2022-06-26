@@ -19,6 +19,7 @@ import { fetchPhpApi } from "../../lib/api"
 import Contact from "../../components/shared/Contact"
 import ProjectCard from "../../components/shared/ProjectCard"
 import Planning from "../../components/shared/Planning"
+import ContactNetwork from "../../components/shared/ContactNetwork"
 
 const ProfilBanner = ({ user, projects }) => {
   return (
@@ -152,7 +153,7 @@ const ProfilBanner = ({ user, projects }) => {
               />
             </TabPanel>
             <TabPanel>
-              <p>four!</p>
+              <ContactNetwork />
             </TabPanel>
           </TabPanels>
         </Tabs>
