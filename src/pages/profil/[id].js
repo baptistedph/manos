@@ -18,6 +18,7 @@ import axios from "axios"
 import { fetchPhpApi } from "../../lib/api"
 import Contact from "../../components/shared/Contact"
 import ProjectCard from "../../components/shared/ProjectCard"
+import Planning from "../../components/shared/Planning"
 
 const ProfilBanner = ({ user, projects }) => {
   return (
@@ -139,7 +140,7 @@ const ProfilBanner = ({ user, projects }) => {
               </Flex>
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Planning />
             </TabPanel>
             <TabPanel>
               <Contact
