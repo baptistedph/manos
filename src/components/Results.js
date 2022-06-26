@@ -1,4 +1,5 @@
 import { Flex, Heading } from "@chakra-ui/react"
+import ProfileCard from "./shared/ProfileCard"
 
 const Results = ({ search, data }) => {
   return (
@@ -6,9 +7,13 @@ const Results = ({ search, data }) => {
       <Heading size="sm">
         {data.length} {data.length > 1 ? "résultats" : "résultat"} pour {search}
       </Heading>
-      {data.map((user) => (
-        <h1>{user.company}</h1>
-      ))}
+      <Flex justify="center" align="baseline" wrap="wrap" gap={5}>
+        {data.map((user) => (
+          <>
+            <ProfileCard user={user} />
+          </>
+        ))}
+      </Flex>
     </Flex>
   )
 }
