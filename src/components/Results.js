@@ -1,6 +1,5 @@
 import { Flex, Heading } from "@chakra-ui/react"
 import ProfileCard from "./shared/ProfileCard"
-import Link from "next/link"
 
 const Results = ({ search, data }) => {
   return (

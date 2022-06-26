@@ -16,6 +16,9 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import axios from "axios"
 import { fetchPhpApi } from "../../lib/api"
+import DefaultLayout from "../../layouts/DefaultLayout"
+import SearchLayout from "../../layouts/SearchLayout"
+import Contact from "../../components/shared/Contact"
 
 const ProfilBanner = ({ user }) => {
   return (
@@ -136,7 +139,13 @@ const ProfilBanner = ({ user }) => {
               <p>two!</p>
             </TabPanel>
             <TabPanel>
-              <p>three!</p>
+              <Contact
+                phone={user.phone}
+                street={user.street}
+                email={user.email}
+                post_code={user.post_code}
+                city={user.city}
+              />
             </TabPanel>
             <TabPanel>
               <p>four!</p>
@@ -147,8 +156,6 @@ const ProfilBanner = ({ user }) => {
     </Box>
   )
 }
-
-export default ProfilBanner
 
 export const getStaticPaths = async () => {
   const res = await fetchPhpApi("/users")
@@ -176,3 +183,5 @@ export const getStaticProps = async (ctx) => {
     props: { user: data },
   }
 }
+
+export default ProfilBanner
