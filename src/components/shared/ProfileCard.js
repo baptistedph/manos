@@ -16,7 +16,6 @@ const SlideImage = ({ src }) => {
 
 const ProfileCard = ({ user }) => {
   const [activeSlide, setActiveSlide] = useState(1)
-  console.log(user)
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1)

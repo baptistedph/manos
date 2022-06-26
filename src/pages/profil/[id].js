@@ -16,11 +16,10 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import axios from "axios"
 import { fetchPhpApi } from "../../lib/api"
-import DefaultLayout from "../../layouts/DefaultLayout"
-import SearchLayout from "../../layouts/SearchLayout"
 import Contact from "../../components/shared/Contact"
+import ProjectCard from "../../components/shared/ProjectCard"
 
-const ProfilBanner = ({ user }) => {
+const ProfilBanner = ({ user, projects }) => {
   return (
     <Box mx="auto" maxW="5xl">
       <Image
@@ -133,7 +132,11 @@ const ProfilBanner = ({ user }) => {
 
           <TabPanels>
             <TabPanel>
-              <p>one!</p>
+              <Flex justify="center" align="baseline" wrap="wrap" gap={5}>
+                {projects.map((project) => (
+                  <ProjectCard project={project} />
+                ))}
+              </Flex>
             </TabPanel>
             <TabPanel>
               <p>two!</p>
@@ -179,8 +182,14 @@ export const getStaticProps = async (ctx) => {
   )
   const data = res.data
 
+  const projectRes = await axios.get(
+    process.env.NEXT_PUBLIC_PHP_API_URL + "/projects.php?userId=" + id
+  )
+
+  const projects = projectRes.data
+
   return {
-    props: { user: data },
+    props: { user: data, projects },
   }
 }
 
