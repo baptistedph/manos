@@ -1,22 +1,22 @@
-import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react"
-import { EmailIcon } from "@chakra-ui/icons"
-import { Swiper, SwiperSlide } from "swiper/react"
-import Image from "next/image"
-import { useState } from "react"
-import Link from "next/link"
-import "swiper/css"
+import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react";
+import { EmailIcon } from "@chakra-ui/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
+import "swiper/css";
 
 const SlideImage = ({ src }) => {
   return (
     <Box position="relative" h={215}>
       <Image src={src} layout="fill" alt="Photo de projet" objectFit="cover" />
     </Box>
-  )
-}
+  );
+};
 
 const ProjectCard = ({ project }) => {
-  const [activeSlide, setActiveSlide] = useState(1)
-  const [slideImageNumber, setImageSlide] = useState(0)
+  const [activeSlide, setActiveSlide] = useState(1);
+  const [slideImageNumber, setImageSlide] = useState(0);
   return (
     <Link href="/">
       <Box
@@ -37,7 +37,7 @@ const ProjectCard = ({ project }) => {
           py={1}
           borderRadius="full"
           fontWeight={600}
-          color="white"
+          color="black"
           top={3}
           right={3}
         >
@@ -70,7 +70,7 @@ const ProjectCard = ({ project }) => {
                     {project.title}
                   </Heading>
                   <Text fontSize="sm" color="gray.500">
-                    {project.description}
+                    {project.description.slice(0, 100) + "..."}
                   </Text>
                 </Box>
               </Flex>
@@ -98,13 +98,23 @@ const ProjectCard = ({ project }) => {
                     </Text>
                   </Box>
                 </Flex>
+                <Flex justifyContent="space-between">
+                  <Box>
+                    <Heading size="xs" mb={1}>
+                      Localisation
+                    </Heading>
+                    <Text fontSize="sm" color="gray.500">
+                      {project.localisation}
+                    </Text>
+                  </Box>
+                </Flex>
               </Flex>
             </Box>
           </SwiperSlide>
         </Swiper>
       </Box>
     </Link>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
