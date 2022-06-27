@@ -19,7 +19,7 @@ const Colab = () => {
 				maxWidth="650px"
 
 			>
-				<h2 style={{ fontSize: 1 + "em", marginTop: 1.25 + "em", marginBottom: 0.5 + 'em', fontWeight: 'bold' }} >Collaborateur</h2>
+				<h2 style={{ fontSize: 1 + "em", marginTop: 1.25 + "em", marginBottom: 0.5 + 'em', fontWeight: 'bold' }} >Collaborateurs</h2>
 				{/* "slidesPerView" needs to be inferior or equal to the number of collaborators. */}
 				<Swiper
 					slidesPerView={5}

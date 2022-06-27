@@ -26,7 +26,7 @@ const Project = () => {
 				maxWidth="650px"
 				p={0}
 			>
-				<h2 style={{ fontSize: 1 + "em", marginTop: 1.25 + "em", marginBottom: 0.5 + 'em', fontWeight: 'bold' }} >Autre projet</h2>
+				<h2 style={{ fontSize: 1 + "em", marginTop: 1.25 + "em", marginBottom: 0.5 + 'em', fontWeight: 'bold' }} >Autres projets</h2>
 				{/* "slidesPerView" needs to be inferior or equal to the number of projects. */}
 				<Swiper
 					slidesPerView={3}
