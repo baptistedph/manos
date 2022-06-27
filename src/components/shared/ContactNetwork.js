@@ -1,11 +1,16 @@
-import { Box, Text, useMediaQuery, Wrap, WrapItem } from '@chakra-ui/react'
-import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
+import { Box, Text, useMediaQuery, Wrap, WrapItem } from "@chakra-ui/react"
+import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react"
 const ContactNetwork = () => {
-  const [isMobile] = useMediaQuery('(max-width: 768px)')
+  const [isMobile] = useMediaQuery("(max-width: 768px)")
 
   return (
-    <Box>
-      <Text fontWeight="bold" mt="1.25em" mb="3.75em" fontSize="1.5em">
+    <Box mb={5}>
+      <Text
+        fontWeight="bold"
+        mt="1.25em"
+        mb="2.75em"
+        fontSize={isMobile ? "1em" : "1.5em"}
+      >
         Réseau
       </Text>
       <Box display="flex" justifyContent="center">
