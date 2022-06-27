@@ -99,6 +99,15 @@
 	.project_swiper_img {
 		height: 13.5em;
 	}
+
+	.projectSmallText {
+		font-size: 0.75em;
+	}
+
+	.projectSmallTitle {
+		font-size: 1em;
+	}
+
 }
 
 @media screen and (min-width: 701px) {
@@ -110,6 +119,14 @@
 
 	.project_swiper_img {
 		height: 24em;
+	}
+
+	.projectSmallText {
+		font-size: 0.9em;
+	}
+
+	.projectSmallTitle {
+		font-size: 1em;
 	}
 }
 

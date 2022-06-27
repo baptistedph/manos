@@ -41,35 +41,34 @@ const ProjectCard = () => {
 				>
 					<Flex justifyContent='space-between'>
 						<Box
-							fontSize='0.75em'
 							fontWeight='bold'
 
 						>
-							<div style={{ fontSize: 1 + "em", marginTop: 1.25 + "em" }}>Année de réalisation</div>
-							<div style={{ fontSize: 0.9 + "em", color: "#94A3B8", fontWeight: 0.044 + "em" }}>{project.date}</div>
+							<div style={{ marginTop: 1.25 + "em" }} className="projectSmallTitle">Année de réalisation</div>
+							<div style={{ color: "#94A3B8", fontWeight: 0.044 + "em" }} className="projectSmallText">{project.date}</div>
 						</Box>
 						<Box
-							fontSize='0.75em'
 							fontWeight='bold'
 							mr='1em'
 						>
-							<div style={{ fontSize: 1 + "em", marginTop: 1.25 + "em" }}>Coût du projet</div>
-							<div style={{ fontSize: 0.9 + "em", color: "#94A3B8", fontWeight: 0.044 + "em" }}>{project.price}</div>
+							<div style={{ marginTop: 1.25 + "em" }} className="projectSmallTitle">Coût du projet</div>
+							<div style={{ color: "#94A3B8", fontWeight: 0.044 + "em" }} className="projectSmallText">{project.price}</div>
 						</Box>
 					</Flex>
 					<Box
-						fontSize='0.75em'
 						fontWeight='bold'
 					>
-						<div style={{ fontSize: 1 + "em", marginTop: 1.25 + "em" }}>Localisation</div>
-						<div style={{ fontSize: 0.9 + "em", color: "#94A3B8", fontWeight: 0.044 + "em" }}>{project.where}</div>
+						<div style={{ marginTop: 1.25 + "em" }} className="projectSmallTitle">Localisation</div>
+						<div style={{ color: "#94A3B8", fontWeight: 0.044 + "em" }} className="projectSmallText">{project.where}</div>
 					</Box>
 				</Box>
 
 				<Box
 					mt="1.5em"
 					mb="1em"
-					ml="5%"
+					display='flex'
+					justifyContent='center'
+					alignItems='center'
 				>
 					<Box as='button' borderRadius='md' bg='#319795' w='18.75em' h='2.5em' m='0' color='white' display='flex' justifyContent='center' alignItems='center'>
 						<img src="./assets/icons/309678.svg" alt="enveloppe" className='spend' />

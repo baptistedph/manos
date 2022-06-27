@@ -21,6 +21,7 @@ const Project = () => {
 			<Box
 				ml="1em"
 				mt="1.5em"
+				mb='1.5em'
 				minW="23.438em"
 				maxWidth="650px"
 				p={0}
