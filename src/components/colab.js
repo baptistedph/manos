@@ -20,47 +20,50 @@ const Colab = () => {
 
 			>
 				<h2 style={{ fontSize: 1 + "em", marginTop: 1.25 + "em", marginBottom: 0.5 + 'em', fontWeight: 'bold' }} >Collaborateur</h2>
+				{/* "slidesPerView" needs to be inferior or equal to the number of collaborators. */}
 				<Swiper
-					slidesPerView={9}
+					slidesPerView={5}
 					spaceBetween={7}
 					modules={[Pagination]}
 					className="Colabs"
 				>
 					<SwiperSlide>
-						<img src={src} className='Collab' />
+						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+							<img src={src} className='Collab' />
+							<span>nom</span>
+							<span>profession</span>
+						</Flex>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+							<img src={src} className='Collab' />
+							<span>nom</span>
+							<span>profession</span>
+						</Flex>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+							<img src={src} className='Collab' />
+							<span>nom</span>
+							<span>profession</span>
+						</Flex>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+							<img src={src} className='Collab' />
+							<span>nom</span>
+							<span>profession</span>
+						</Flex>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+							<img src={src} className='Collab' />
+							<span>nom</span>
+							<span>profession</span>
+						</Flex>
 					</SwiperSlide>
 
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
 
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<img src={src} className='Collab' />
-					</SwiperSlide>
 				</Swiper>
 			</Box>
 		</Flex>
