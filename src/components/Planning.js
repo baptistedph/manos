@@ -35,7 +35,7 @@ const Planning = () => {
             <Planning_card month="February" />
           </SwiperSlide>
           <SwiperSlide>
-            <Planning_card month="Mars" />
+            <Planning_card month="March" />
           </SwiperSlide>
           <SwiperSlide>
             <Planning_card month="April" />
