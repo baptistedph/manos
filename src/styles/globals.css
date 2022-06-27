@@ -55,10 +55,6 @@
 	border-radius: 1.25em;
 }
 
-.CollabFlex {
-	margin-left: 1em;
-}
-
 .projectSlide {
 	display: flex;
 	flex-direction: column;
@@ -109,6 +105,10 @@
 
 	.projectSmallTitle {
 		font-size: 1em;
+	}
+
+	.CollabHidden {
+		display: none;
 	}
 
 }

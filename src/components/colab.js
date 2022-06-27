@@ -28,42 +28,54 @@ const Colab = () => {
 					className="Colabs"
 				>
 					<SwiperSlide>
-						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+						<Flex flexDirection="column" justifyContent="center" alignItems="center">
 							<img src={src} className='Collab' />
-							<span>nom</span>
-							<span>profession</span>
+							<span className="CollabHidden">nom</span>
+							<span className="CollabHidden">profession</span>
 						</Flex>
 					</SwiperSlide>
 					<SwiperSlide>
-						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+						<Flex flexDirection="column" justifyContent="center" alignItems="center">
 							<img src={src} className='Collab' />
-							<span>nom</span>
-							<span>profession</span>
+							<span className="CollabHidden">nom</span>
+							<span className="CollabHidden">profession</span>
 						</Flex>
 					</SwiperSlide>
 					<SwiperSlide>
-						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+						<Flex flexDirection="column" justifyContent="center" alignItems="center">
 							<img src={src} className='Collab' />
-							<span>nom</span>
-							<span>profession</span>
+							<span className="CollabHidden">nom</span>
+							<span className="CollabHidden">profession</span>
 						</Flex>
 					</SwiperSlide>
 					<SwiperSlide>
-						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+						<Flex flexDirection="column" justifyContent="center" alignItems="center">
 							<img src={src} className='Collab' />
-							<span>nom</span>
-							<span>profession</span>
+							<span className="CollabHidden">nom</span>
+							<span className="CollabHidden">profession</span>
 						</Flex>
 					</SwiperSlide>
 					<SwiperSlide>
-						<Flex flexDirection="column" justifyContent="center" alignItems="center" className="CollabFlex">
+						<Flex flexDirection="column" justifyContent="center" alignItems="center">
 							<img src={src} className='Collab' />
-							<span>nom</span>
-							<span>profession</span>
+							<span className="CollabHidden">nom</span>
+							<span className="CollabHidden">profession</span>
 						</Flex>
 					</SwiperSlide>
-
-
+					<SwiperSlide>
+						<Flex flexDirection="column" justifyContent="center" alignItems="center">
+							<img src={src} className='Collab' />
+							<span className="CollabHidden">nom</span>
+							<span className="CollabHidden">profession</span>
+						</Flex>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Flex flexDirection="column" justifyContent="center" alignItems="center">
+							<img src={src} className='Collab' />
+							<span className="CollabHidden">nom</span>
+							<span className="CollabHidden">profession</span>
+						</Flex>
+					</SwiperSlide>
 				</Swiper>
 			</Box>
 		</Flex>
