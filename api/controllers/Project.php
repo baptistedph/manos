@@ -62,10 +62,9 @@ class Project {
 
     $project = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    for ($i = 0; $i < count($project); $i++){
-      if ($project[$i]["pictures_name"] != NULL) {
-        $project[$i]["pictures_name"] = explode(",", $project[$i]["pictures_name"]);
-      }
+    
+      if ($project["pictures_name"] != NULL) {
+        $project["pictures_name"] = explode(",", $project["pictures_name"]);
     }
 
     return json_encode($project);
