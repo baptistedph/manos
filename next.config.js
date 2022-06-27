@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
-const withPWA = require('next-pwa')
+const withPWA = require("next-pwa")
 
 const nextConfig = {
   reactStrictMode: false,
   pwa: {
-    dest: 'public',
+    dest: "public",
+  },
+  images: {
+    domains: ["thispersondoesnotexist.com", "api-manos.bdph.me"],
   },
 }
 

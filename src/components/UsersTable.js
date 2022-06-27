@@ -8,6 +8,8 @@ import {
   TableContainer,
 } from '@chakra-ui/react'
 
+import Header from './shared/Header'
+
 const UsersTable = ({ users }) => {
   return (
     <TableContainer mt={10}>
