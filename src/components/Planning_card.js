@@ -9,29 +9,13 @@ import {
   TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
-import { Box, Flex, Spacer } from "@chakra-ui/react";
-import { Center, Square, Circle } from "@chakra-ui/react";
-import { Button } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
-import Swiper from "swiper";
-import { extendTheme } from "@chakra-ui/react";
-import { Grid, GridItem } from "@chakra-ui/react";
-// This button will have no right borderRadius
+import { Box, Flex } from "@chakra-ui/react";
+import { Center, Circle } from "@chakra-ui/react";
 
 const Planning_card = ({ month }) => {
   return (
     <Flex justifyContent="center">
       <Box w={["30em", "30em", "48em"]}>
-        {/* <Text
-          fontSize={["0.875em", "0.875em", "1.5em"]}
-          ml={["1em", "1em", "0.6em"]}
-          mb="0.75em"
-          mt="1.25em"
-          mr="1em"
-          fontWeight="bold"
-        >
-          Planning 2022
-        </Text> */}
         <Box
           borderWidth="0.0625em"
           borderRadius="0.625em"
@@ -40,6 +24,7 @@ const Planning_card = ({ month }) => {
           mr="1em"
           h={["19em", "19em", "35em"]}
         >
+          {/* la table du mois */}
           <TableContainer>
             <Center
               h={["3.4375em", "3.4375em", "2.5em"]}
@@ -50,32 +35,18 @@ const Planning_card = ({ month }) => {
               fontWeight="medium"
               className="month"
             >
-              {/* <Button
-                borderRadius="50%"
-                backgroundColor="white"
-                border="0.0625em lightgrey solid"
-                size={["xs", "md"]}
-                left={["1.5em", "3em"]}
-              ></Button> */}
               {month} 2022
-              {/* <Button
-                borderRadius="50%"
-                backgroundColor="white"
-                border="0.0625em lightgrey solid"
-                size={["xs", "md"]}
-                right={["1.5em", "3em"]}
-              ></Button> */}
             </Center>
-
             <Table
               variant="simple"
               display="grid"
               gridTemplateRows={["3em 12.5em", "3em 12.5em", "5em 25em"]}
               alignItems={[null, "center"]}
             >
+              {/* les jours de la semaine */}
               <Thead className="planning_thead">
                 <Tr
-                  h="50px"
+                  h="4em"
                   fontSize={["0.75em", "0.75em", "1.8em"]}
                   display="grid"
                   gridTemplateColumns={[
@@ -86,7 +57,6 @@ const Planning_card = ({ month }) => {
                   justifyContent="center"
                   justifyItems="center"
                   alignItems="center"
-                  //"repeat(7,2.525em)"
                 >
                   <Th color="#999A99" textTransform="none">
                     Mon
@@ -111,7 +81,7 @@ const Planning_card = ({ month }) => {
                   </Th>
                 </Tr>
               </Thead>
-
+              {/* il y'a tout les dates du mois */}
               <Tbody
                 className="planning_tbody"
                 h={["13.2em", "13.2em", "25em"]}
@@ -122,7 +92,6 @@ const Planning_card = ({ month }) => {
                   "repeat(7,1.875em)",
                   "repeat(7,4em)",
                 ]}
-                // 2.525em
               >
                 <Tr
                   display="grid"
