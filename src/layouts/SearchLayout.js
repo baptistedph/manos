@@ -14,19 +14,18 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-} from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
-import Filter from '../components/shared/Filter'
+} from "@chakra-ui/react"
+import React, { useState } from "react"
 
 const SearchLayout = ({ children }) => {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState("")
   const [slideValue, setSlideValue] = useState(10)
   return (
     <Box px={4}>
       <Input
         placeholder="Que recherchez-vous ?"
         value={search}
-        onChange={e => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
       />
       <Flex gap={3} mt={3}>
         <Popover placement="bottom-start">
@@ -56,7 +55,8 @@ const SearchLayout = ({ children }) => {
               mr="20px"
               mt="10px"
               fontSize="12px"
-              fontWeight="bold">
+              fontWeight="bold"
+            >
               <span color="#94A3B8">{slideValue}km</span>
             </Flex>
 
@@ -69,7 +69,8 @@ const SearchLayout = ({ children }) => {
               defaultValue={10}
               width="311px"
               height="16px"
-              onChange={e => setSlideValue(e)}>
+              onChange={(e) => setSlideValue(e)}
+            >
               <SliderTrack>
                 <SliderFilledTrack />
               </SliderTrack>
@@ -77,7 +78,7 @@ const SearchLayout = ({ children }) => {
             </Slider>
             <PopoverArrow />
             <PopoverCloseButton />
-          </PopoverContent>{' '}
+          </PopoverContent>{" "}
         </Popover>
 
         <Popover>

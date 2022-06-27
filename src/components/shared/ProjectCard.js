@@ -48,8 +48,8 @@ const ProjectCard = ({ project }) => {
           onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex + 1)}
           onSwiper={(swiper) => setImageSlide(swiper.imagesLoaded)}
         >
-          {project.pictures_name?.map((picture) => (
-            <SwiperSlide>
+          {project.pictures_name?.map((picture, i) => (
+            <SwiperSlide key={i}>
               <SlideImage
                 src={"https://api-manos.bdph.me/uploads/" + picture}
               />
