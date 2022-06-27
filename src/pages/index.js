@@ -9,6 +9,7 @@ import Network from "../components/Network";
 import Category_swiper_jobs from "../components/Category_swiper_jobs";
 import Category_swiper_type from "../components/Category_swiper_type";
 import { Box } from "@chakra-ui/react";
+import Planning from "../components/Planning";
 // export const getServerSideProps = async ({ req }) => {
 //   const users = await fetchApi("/users");
 
@@ -22,9 +23,7 @@ import { Box } from "@chakra-ui/react";
 const Home = ({ users }) => {
   return (
     <Box>
-      <Category_swiper_jobs />
-      <Category_swiper_type />
-      <Planning_card />
+      <Planning />
     </Box>
     // <Flex
     //   alignItems="center"
