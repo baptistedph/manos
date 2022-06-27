@@ -11,7 +11,7 @@ class Project {
 
   public function get_all_from_user($user_id) {
 
-    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan, projects.uuid as uuid, pictures_name";
+    $fields = "projects.id as project_id, title, description, budget, projects.user_id, localisation, timespan, projects.uuid as uuid, pictures_name";
     
     $query = "SELECT $fields FROM projects
       LEFT JOIN(
@@ -42,7 +42,7 @@ class Project {
 
   public function get_single($project_id) {
 
-    $fields = "projects.id as project_id, title, description, budget, projects.user_id, timespan,  pictures_name, projects.uuid";
+    $fields = "projects.id as project_id, title, description, budget, projects.user_id, localisation, timespan,  pictures_name, projects.uuid";
 
     $query = "SELECT $fields FROM projects
       LEFT JOIN(
