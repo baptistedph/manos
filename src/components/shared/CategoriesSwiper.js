@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import Category from "./Category"
 import { Box, Flex, Heading } from "@chakra-ui/react"
 
-const CategoriesSwiper = ({ title, categories = [] }) => {
+const CategoriesSwiper = ({ title, categories = [], images }) => {
   return (
     <Flex flexDirection="column" gap={3}>
       <Heading size="sm">{title}</Heading>
@@ -13,7 +13,7 @@ const CategoriesSwiper = ({ title, categories = [] }) => {
               <SwiperSlide key={i}>
                 <Category
                   name={category}
-                  image="https://thispersondoesnotexist.com/image"
+                  image={"/assets/" + images[i] + ".jpeg"}
                 />
               </SwiperSlide>
             )

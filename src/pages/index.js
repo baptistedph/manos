@@ -39,11 +39,13 @@ const Home = ({ search }) => {
       <Flex mt={5} flexDirection="column" gap={5}>
         <CategoriesSwiper
           title="Métiers"
-          categories={['Menuisier', 'Charpentier', 'Peintre', 'Plaquiste']}
+          categories={['Menuisiers', 'Cusinistes', 'Architectes', 'Paysagistes']}
+          images={["metier_menuisier", "metier_cuisiniste", "metier_architecte", "metier_paysagiste"]}
         />
         <CategoriesSwiper
           title="Projets"
-          categories={['Cuisines', 'Salles de bain', 'Escaliers', 'Verranda']}
+          categories={['Terrasses', 'Salles de bain', 'Escaliers', 'Bibliothèques']}
+          images={["projet_terrasse", "projet_salle_de_bain", "projet_escalier", "projet_bibliotheque"]}
         />
       </Flex>
     )

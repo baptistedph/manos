@@ -91,7 +91,7 @@ const ProfileCard = ({ user }) => {
           <Box>
             <Heading size="xs">Services</Heading>
             <Text fontSize="sm" color="gray.500">
-              Découpe du bois, sculpture, peinture
+              {user.service}
             </Text>
           </Box>
           <Button colorScheme="teal" mt={1}>

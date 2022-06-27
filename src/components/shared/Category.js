@@ -2,6 +2,7 @@ import { Flex, Box } from '@chakra-ui/react'
 import Image from 'next/image'
 
 const Category = ({ name, image }) => {
+  console.log(image)
   return (
     <Flex
       flexDirection="column"
@@ -10,7 +11,7 @@ const Category = ({ name, image }) => {
       borderColor="gray.200"
       borderRadius={6}
       overflow="hidden">
-      <Box h={100} position="relative">
+      <Box h={{base: "100px", lg: "150px"}} position="relative">
         <Image
           src={image}
           layout="fill"
