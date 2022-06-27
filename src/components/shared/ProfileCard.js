@@ -1,25 +1,25 @@
-import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react"
-import { EmailIcon } from "@chakra-ui/icons"
-import { Swiper, SwiperSlide } from "swiper/react"
-import Image from "next/image"
-import { useState } from "react"
-import Link from "next/link"
-import "swiper/css"
+import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react";
+import { EmailIcon } from "@chakra-ui/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
+import "swiper/css";
 
 const SlideImage = ({ src }) => {
   return (
     <Box position="relative" h={215}>
       <Image src={src} layout="fill" alt="Photo de projet" objectFit="cover" />
     </Box>
-  )
-}
+  );
+};
 
 const ProfileCard = ({ user }) => {
-  const [activeSlide, setActiveSlide] = useState(1)
+  const [activeSlide, setActiveSlide] = useState(1);
 
   const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1)
-  }
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   return (
     <Link href={"/profil/" + user.id} key={user.id}>
@@ -41,7 +41,7 @@ const ProfileCard = ({ user }) => {
           py={1}
           borderRadius="full"
           fontWeight={600}
-          color="white"
+          color="black"
           top={3}
           right={3}
         >
@@ -100,7 +100,7 @@ const ProfileCard = ({ user }) => {
         </Flex>
       </Box>
     </Link>
-  )
-}
+  );
+};
 
-export default ProfileCard
+export default ProfileCard;
