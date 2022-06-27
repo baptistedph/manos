@@ -31,6 +31,7 @@ const ProfilBanner = ({ user, projects }) => {
         objectPosition="100% 0"
         src={"https://api-manos.bdph.me/uploads/" + user.banner}
         alt="banner"
+        backgroundPosition="center"
       />
       <Flex
         justify="space-between"

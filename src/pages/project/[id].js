@@ -15,8 +15,10 @@ import { useTheme } from "@mui/material/styles"
 import Link from "next/link"
 
 const SlideImage = ({ src }) => {
+  const theme = useTheme()
+  const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
   return (
-    <Box position="relative" h={215}>
+    <Box position="relative" h={isMatches ? 400 : 215}>
       <Image src={src} layout="fill" alt="Photo de projet" objectFit="cover" />
     </Box>
   )
@@ -86,7 +88,14 @@ const ProjectPage = ({ project }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Flex flexDir="column" p={4} gap={4}>
+      <Flex
+        flexDir="column"
+        p={isMatches ? 0 : 4}
+        mt={isMatches ? 4 : 0}
+        mb={isMatches ? 4 : 0}
+        gap={4}
+        style={{ zoom: isMatches ? 1.2 : 1 }}
+      >
         <Box>
           <Heading size="sm" mb={3}>
             {project.title}
