@@ -9,7 +9,7 @@ const ContactNetwork = () => {
         fontWeight="bold"
         mt="1.25em"
         mb="2.75em"
-        fontSize={isMobile ? "1em" : "1.5em"}
+        fontSize={["0.875em", "0.875em", "1.5em"]}
       >
         Réseau
       </Text>

@@ -56,11 +56,7 @@ const ProjectCard = ({ project }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <Swiper
-          slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
+        <Swiper slidesPerView={1}>
           <SwiperSlide>
             <Box>
               <Flex flexDir="column" p={4} gap={4}>

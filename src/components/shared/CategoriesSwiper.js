@@ -6,7 +6,6 @@ import { useTheme } from "@mui/material/styles"
 const CategoriesSwiper = ({ title, categories = [], images = [] }) => {
   const theme = useTheme()
   const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
-  console.log(images)
   return (
     <Flex flexDirection="column" gap={3}>
       <Heading size="sm">{title}</Heading>

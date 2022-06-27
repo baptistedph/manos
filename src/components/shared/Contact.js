@@ -3,15 +3,19 @@ import { Grid, GridItem, Heading, Flex, Box } from "@chakra-ui/react"
 const Contact = ({ phone, street, email, post_code, city }) => {
   return (
     <>
-      <Box mx="auto" maxW="4xl">
+      <Box mx="auto" maxW="4xl" mb={5}>
         <Grid templateColumns="repeat(2, 1fr)" mt={5}>
           <GridItem colSpan={2} mb={3}>
-            <Heading size="sm" fontSize={{ base: "14px", lg: "22px" }}>
+            <Heading size="sm" fontSize={["0.875em", "0.875em", "1.5em"]}>
               Contact
             </Heading>
           </GridItem>
           <GridItem>
-            <Heading size="sm" fontSize={{ base: "12px", lg: "18px" }} mb={1}>
+            <Heading
+              size="sm"
+              fontSize={{ base: "12px", sm: "14px", lg: "18px" }}
+              mb={1}
+            >
               Téléphone
             </Heading>
             <Heading
@@ -24,7 +28,11 @@ const Contact = ({ phone, street, email, post_code, city }) => {
             </Heading>
           </GridItem>
           <GridItem>
-            <Heading size="sm" fontSize={{ base: "12px", lg: "18px" }} mb={1}>
+            <Heading
+              size="sm"
+              fontSize={{ base: "12px", sm: "14px", lg: "18px" }}
+              mb={1}
+            >
               Adresse
             </Heading>
             <Heading
@@ -37,7 +45,11 @@ const Contact = ({ phone, street, email, post_code, city }) => {
             </Heading>
           </GridItem>
           <GridItem>
-            <Heading size="sm" fontSize={{ base: "12px", lg: "18px" }} mb={1}>
+            <Heading
+              size="sm"
+              fontSize={{ base: "12px", sm: "14px", lg: "18px" }}
+              mb={1}
+            >
               Email
             </Heading>
             <Heading
@@ -50,7 +62,11 @@ const Contact = ({ phone, street, email, post_code, city }) => {
             </Heading>
           </GridItem>
           <GridItem>
-            <Heading size="sm" fontSize={{ base: "12px", lg: "18px" }} mb={1}>
+            <Heading
+              size="sm"
+              fontSize={{ base: "12px", sm: "14px", lg: "18px" }}
+              mb={1}
+            >
               Code postal
             </Heading>
             <Heading
@@ -63,7 +79,11 @@ const Contact = ({ phone, street, email, post_code, city }) => {
             </Heading>
           </GridItem>
           <GridItem>
-            <Heading size="sm" fontSize={{ base: "12px", lg: "18px" }} mb={1}>
+            <Heading
+              size="sm"
+              fontSize={{ base: "12px", sm: "14px", lg: "18px" }}
+              mb={1}
+            >
               Ville
             </Heading>
             <Heading

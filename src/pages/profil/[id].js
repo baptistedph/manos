@@ -156,7 +156,6 @@ const ProfilBanner = ({ user, projects }) => {
 }
 
 export const getServerSideProps = async ({ req, query }) => {
-  console.log(query.id)
   const id = query.id
   const res = await axios.get(
     process.env.NEXT_PUBLIC_PHP_API_URL + "/users.php?userId=" + id

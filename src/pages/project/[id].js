@@ -58,7 +58,6 @@ const ProjectPage = ({ project }) => {
       )
       .then((res) => setOtherProjects(res.data))
   }, [])
-  console.log(otherProjectsId)
   return (
     <Box maxW="4xl" mx="auto" overflow="hidden" position="relative">
       <Box
@@ -173,7 +172,7 @@ const ProjectPage = ({ project }) => {
               <Swiper spaceBetween={12} slidesPerView={isMatches ? 3 : 2}>
                 {otherProjectsTitle.map((category, i) => {
                   return (
-                    <SwiperSlide key={i} onClick={() => console.log("salut")}>
+                    <SwiperSlide key={i}>
                       <Box>
                         <Link href={"/project/" + otherProjectsId[i]}>
                           <Category

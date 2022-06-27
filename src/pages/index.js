@@ -20,12 +20,10 @@ export const getServerSideProps = async ({ req }) => {
 const Home = ({ search }) => {
   const [data, setData] = useState([])
   useEffect(() => {
-    console.log(search)
     axios
       .get(process.env.NEXT_PUBLIC_PHP_API_URL + "/users.php?job=" + search)
       .then((res) => {
         setData(res.data)
-        console.log(res.data)
       })
   }, [search])
   if (search) {
