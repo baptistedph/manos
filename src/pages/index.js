@@ -1,14 +1,14 @@
-import axios from 'axios'
-import { Flex } from '@chakra-ui/react'
-import { fetchApi } from '../lib/api'
-import DefaultLayout from '../layouts/DefaultLayout'
-import SearchLayout from '../layouts/SearchLayout'
-import CategoriesSwiper from '../components/shared/CategoriesSwiper'
-import { useEffect, useState } from 'react'
-import Results from '../components/Results'
+import axios from "axios"
+import { Flex } from "@chakra-ui/react"
+import { fetchApi } from "../lib/api"
+import DefaultLayout from "../layouts/DefaultLayout"
+import SearchLayout from "../layouts/SearchLayout"
+import CategoriesSwiper from "../components/shared/CategoriesSwiper"
+import { useEffect, useState } from "react"
+import Results from "../components/Results"
 
 export const getServerSideProps = async ({ req }) => {
-  const users = await fetchApi('/users')
+  const users = await fetchApi("/users")
 
   return {
     props: {
@@ -22,8 +22,8 @@ const Home = ({ search }) => {
   useEffect(() => {
     console.log(search)
     axios
-      .get(process.env.NEXT_PUBLIC_PHP_API_URL + '/users.php?job=' + search)
-      .then(res => {
+      .get(process.env.NEXT_PUBLIC_PHP_API_URL + "/users.php?job=" + search)
+      .then((res) => {
         setData(res.data)
         console.log(res.data)
       })
@@ -39,20 +39,40 @@ const Home = ({ search }) => {
       <Flex mt={5} flexDirection="column" gap={5}>
         <CategoriesSwiper
           title="Métiers"
-          categories={['Menuisiers', 'Cusinistes', 'Architectes', 'Paysagistes']}
-          images={["metier_menuisier", "metier_cuisiniste", "metier_architecte", "metier_paysagiste"]}
+          categories={[
+            "Menuisiers",
+            "Cusinistes",
+            "Architectes",
+            "Paysagistes",
+          ]}
+          images={[
+            "/assets/metier_menuisier.jpeg",
+            "/assets/metier_cuisiniste.jpeg",
+            "/assets/metier_architecte.jpeg",
+            "/assets/metier_paysagiste.jpeg",
+          ]}
         />
         <CategoriesSwiper
           title="Projets"
-          categories={['Terrasses', 'Salles de bain', 'Escaliers', 'Bibliothèques']}
-          images={["projet_terrasse", "projet_salle_de_bain", "projet_escalier", "projet_bibliotheque"]}
+          categories={[
+            "Terrasses",
+            "Salles de bain",
+            "Escaliers",
+            "Bibliothèques",
+          ]}
+          images={[
+            "/assets/projet_terrasse.jpeg",
+            "/assets/projet_salle_de_bain.jpeg",
+            "/assets/projet_escalier.jpeg",
+            "/assets/projet_bibliotheque.jpeg",
+          ]}
         />
       </Flex>
     )
   }
 }
 
-Home.getLayout = page => {
+Home.getLayout = (page) => {
   return (
     <DefaultLayout>
       <SearchLayout>{page}</SearchLayout>

@@ -1,5 +1,5 @@
-import { Box } from '@chakra-ui/react'
-import Header from '../components/shared/Header'
+import { Box } from "@chakra-ui/react"
+import Header from "../components/shared/Header"
 
 const DefaultLayout = ({ children }) => {
   return (

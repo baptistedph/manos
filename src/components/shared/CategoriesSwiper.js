@@ -1,11 +1,12 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import Category from "./Category";
-import { Box, Flex, Heading } from "@chakra-ui/react";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
-const CategoriesSwiper = ({ title, categories = [], images }) => {
-  const theme = useTheme();
-  const isMatches = useMediaQuery(theme.breakpoints.up("lg"));
+import { Swiper, SwiperSlide } from "swiper/react"
+import Category from "./Category"
+import { Box, Flex, Heading } from "@chakra-ui/react"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTheme } from "@mui/material/styles"
+const CategoriesSwiper = ({ title, categories = [], images = [] }) => {
+  const theme = useTheme()
+  const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
+  console.log(images)
   return (
     <Flex flexDirection="column" gap={3}>
       <Heading size="sm">{title}</Heading>
@@ -14,17 +15,14 @@ const CategoriesSwiper = ({ title, categories = [], images }) => {
           {categories.map((category, i) => {
             return (
               <SwiperSlide key={i}>
-                <Category
-                  name={category}
-                  image={"/assets/" + images[i] + ".jpeg"}
-                />
+                <Category name={category} image={images[i]} />
               </SwiperSlide>
-            );
+            )
           })}
         </Swiper>
       </Box>
     </Flex>
-  );
-};
+  )
+}
 
-export default CategoriesSwiper;
+export default CategoriesSwiper

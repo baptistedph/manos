@@ -7,9 +7,15 @@ const Results = ({ search, data }) => {
       <Heading size="sm">
         {data.length} {data.length > 1 ? "résultats" : "résultat"} pour {search}
       </Heading>
-      <Flex justify="space-between" align="baseline" wrap="wrap" gap={5} className="profils">
+      <Flex
+        justify={{ base: "center", sm: "space-between" }}
+        align="baseline"
+        wrap="wrap"
+        gap={5}
+        className="profils"
+      >
         {data.map((user) => (
-          <Box w={{base: "350px", lg:"420px"}}>
+          <Box w={{ base: "350px", lg: "420px" }}>
             <ProfileCard user={user} />
           </Box>
         ))}

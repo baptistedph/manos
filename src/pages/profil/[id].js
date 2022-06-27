@@ -20,6 +20,8 @@ import Contact from "../../components/shared/Contact"
 import ProjectCard from "../../components/shared/ProjectCard"
 import Planning from "../../components/shared/Planning"
 import ContactNetwork from "../../components/shared/ContactNetwork"
+import DefaultLayout from "../../layouts/DefaultLayout"
+import BackArrow from "../../components/shared/BackArrow"
 
 const ProfilBanner = ({ user, projects }) => {
   return (
@@ -162,23 +164,9 @@ const ProfilBanner = ({ user, projects }) => {
   )
 }
 
-export const getStaticPaths = async () => {
-  const res = await fetchPhpApi("/users")
-
-  const paths = res.map((user) => {
-    return {
-      params: { id: user.id.toString() },
-    }
-  })
-
-  return {
-    paths,
-    fallback: false,
-  }
-}
-
-export const getStaticProps = async (ctx) => {
-  const id = ctx.params.id
+export const getServerSideProps = async ({ req, query }) => {
+  console.log(query.id)
+  const id = query.id
   const res = await axios.get(
     process.env.NEXT_PUBLIC_PHP_API_URL + "/users.php?userId=" + id
   )
@@ -193,6 +181,15 @@ export const getStaticProps = async (ctx) => {
   return {
     props: { user: data, projects },
   }
+}
+
+ProfilBanner.getLayout = (page) => {
+  return (
+    <DefaultLayout>
+      <BackArrow />
+      {page}
+    </DefaultLayout>
+  )
 }
 
 export default ProfilBanner
