@@ -28,7 +28,7 @@ const ProjectPage = ({ project }) => {
   const theme = useTheme()
   const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
   const [activeSlide, setActiveSlide] = useState(1)
-  const [slideImageNumber, setImageSlide] = useState(0)
+  const slideImageNumber = project.pictures_name.length
   const [collaborateurs, SetCollaborateurs] = useState([])
   const [otherProjects, setOtherProjects] = useState([])
   const otherProjectsFiltered = otherProjects.filter(
@@ -80,7 +80,6 @@ const ProjectPage = ({ project }) => {
       <Swiper
         slidesPerView={1}
         onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex + 1)}
-        onSwiper={(swiper) => setImageSlide(swiper.imagesLoaded)}
       >
         {project.pictures_name?.map((picture, i) => (
           <SwiperSlide key={i}>
