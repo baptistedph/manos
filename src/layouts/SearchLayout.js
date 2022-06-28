@@ -16,12 +16,16 @@ import {
   SliderThumb,
 } from "@chakra-ui/react"
 import React, { useState } from "react"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTheme } from "@mui/material/styles"
 
 const SearchLayout = ({ children }) => {
   const [search, setSearch] = useState("")
   const [slideValue, setSlideValue] = useState(10)
+  const theme = useTheme()
+  const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
   return (
-    <Box px={4}>
+    <Box px={isMatches ? 0 : 4}>
       <Input
         placeholder="Que recherchez-vous ?"
         value={search}
