@@ -19,7 +19,7 @@ const Category = ({ name, image }) => {
           alt={`Image de la catégorie ${name}`}
         />
       </Box>
-      <Flex justifyContent="center" py={2}>
+      <Flex justifyContent="center" py={2} px={2}>
         {name}
       </Flex>
     </Flex>

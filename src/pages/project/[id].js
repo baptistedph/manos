@@ -118,7 +118,7 @@ const ProjectPage = ({ project }) => {
               Coût du projet
             </Heading>
             <Text fontSize="sm" color="gray.500">
-              {project.budget}
+              {project.budget.toLocaleString()}
             </Text>
           </Box>
         </Flex>
