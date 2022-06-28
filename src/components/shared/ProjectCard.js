@@ -16,7 +16,7 @@ const SlideImage = ({ src }) => {
 
 const ProjectCard = ({ project }) => {
   const [activeSlide, setActiveSlide] = useState(1)
-  const [slideImageNumber, setImageSlide] = useState(0)
+  const slideImageNumber = project.pictures_name.length
   return (
     <Link href={"/project/" + project.project_id}>
       <Box
@@ -46,7 +46,6 @@ const ProjectCard = ({ project }) => {
         <Swiper
           slidesPerView={1}
           onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex + 1)}
-          onSwiper={(swiper) => setImageSlide(swiper.imagesLoaded)}
         >
           {project.pictures_name?.map((picture, i) => (
             <SwiperSlide key={i}>
