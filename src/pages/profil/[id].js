@@ -88,18 +88,6 @@ const ProfilBanner = ({ user, projects }) => {
           mr="16px"
         >
           {user.bio}
-          <Button
-            fontWeight="bold"
-            variant="ghost"
-            h="10px"
-            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-            m="0px"
-            p="0px"
-            marginLeft="2px"
-            marginBottom="2px"
-          >
-            Lire plus
-          </Button>
         </Text>
       </Box>
       <Flex align="center" justify="center" mt={12} mx={4}>
