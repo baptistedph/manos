@@ -2,10 +2,14 @@ import { Flex, Box } from "@chakra-ui/react"
 import Image from "next/image"
 import Link from "next/link"
 import BackArrow from "./BackArrow"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTheme } from "@mui/material/styles"
 const Header = () => {
+  const theme = useTheme()
+  const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
   return (
     <>
-      <Flex justifyContent="space-between" py={5} px={4}>
+      <Flex justifyContent="space-between" py={5} px={isMatches ? 0 : 4}>
         <Link href="/">
           <Image src="/logo.svg" width={40} height={40} alt="Logo de Manos" />
         </Link>
