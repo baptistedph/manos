@@ -26,7 +26,7 @@
     "react-dom": "18.2.0",
     "rooks": "^5.11.2",
     "socket.io-client": "^4.5.1",
-    "swiper": "^8.2.4"
+    "swiper": "^8.2.5"
   },
   "devDependencies": {
     "eslint": "8.18.0",
