@@ -10,16 +10,16 @@ import {
   Tab,
   TabPanel,
   Flex,
-} from "@chakra-ui/react"
-import axios from "axios"
-import { fetchPhpApi } from "../../lib/api"
-import Contact from "../../components/shared/Contact"
-import ProjectCard from "../../components/shared/ProjectCard"
-import Planning from "../../components/shared/Planning"
-import ContactNetwork from "../../components/shared/ContactNetwork"
-import DefaultLayout from "../../layouts/DefaultLayout"
-import BackArrow from "../../components/shared/BackArrow"
-import { EmailIcon, LinkIcon } from "@chakra-ui/icons"
+} from "@chakra-ui/react";
+import axios from "axios";
+import { fetchPhpApi } from "../../lib/api";
+import Contact from "../../components/shared/Contact";
+import ProjectCard from "../../components/shared/ProjectCard";
+import Planning from "../../components/shared/Planning";
+import ContactNetwork from "../../components/shared/ContactNetwork";
+import DefaultLayout from "../../layouts/DefaultLayout";
+import BackArrow from "../../components/shared/BackArrow";
+import { EmailIcon, LinkIcon } from "@chakra-ui/icons";
 
 const ProfilBanner = ({ user, projects }) => {
   return (
@@ -94,7 +94,7 @@ const ProfilBanner = ({ user, projects }) => {
         <Tabs variant="line" colorScheme="teal" w="100%">
           <TabList color="teal">
             <Tab w="100%" fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
-              Projet
+              Projets
             </Tab>
             <Tab w="100%" fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
               Planning
@@ -141,26 +141,26 @@ const ProfilBanner = ({ user, projects }) => {
         </Tabs>
       </Flex>
     </Box>
-  )
-}
+  );
+};
 
 export const getServerSideProps = async ({ req, query }) => {
-  const id = query.id
+  const id = query.id;
   const res = await axios.get(
     process.env.NEXT_PUBLIC_PHP_API_URL + "/users.php?userId=" + id
-  )
-  const data = res.data
+  );
+  const data = res.data;
 
   const projectRes = await axios.get(
     process.env.NEXT_PUBLIC_PHP_API_URL + "/projects.php?userId=" + id
-  )
+  );
 
-  const projects = projectRes.data
+  const projects = projectRes.data;
 
   return {
     props: { user: data, projects },
-  }
-}
+  };
+};
 
 ProfilBanner.getLayout = (page) => {
   return (
@@ -168,7 +168,7 @@ ProfilBanner.getLayout = (page) => {
       <BackArrow />
       {page}
     </DefaultLayout>
-  )
-}
+  );
+};
 
-export default ProfilBanner
+export default ProfilBanner;

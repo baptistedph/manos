@@ -1,48 +1,48 @@
-import React, { useEffect } from "react"
-import axios from "axios"
-import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react"
-import { EmailIcon } from "@chakra-ui/icons"
-import { Swiper, SwiperSlide } from "swiper/react"
-import Image from "next/image"
-import { useState } from "react"
-import "swiper/css"
-import DefaultLayout from "../../layouts/DefaultLayout"
-import CategoriesSwiper from "../../components/shared/CategoriesSwiper"
-import BackArrow from "../../components/shared/BackArrow"
-import Category from "../../components/shared/Category"
-import useMediaQuery from "@mui/material/useMediaQuery"
-import { useTheme } from "@mui/material/styles"
-import Link from "next/link"
+import React, { useEffect } from "react";
+import axios from "axios";
+import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react";
+import { EmailIcon } from "@chakra-ui/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import { useState } from "react";
+import "swiper/css";
+import DefaultLayout from "../../layouts/DefaultLayout";
+import CategoriesSwiper from "../../components/shared/CategoriesSwiper";
+import BackArrow from "../../components/shared/BackArrow";
+import Category from "../../components/shared/Category";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import Link from "next/link";
 
 const SlideImage = ({ src }) => {
-  const theme = useTheme()
-  const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
+  const theme = useTheme();
+  const isMatches = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Box position="relative" h={isMatches ? 400 : 215}>
       <Image src={src} layout="fill" alt="Photo de projet" objectFit="cover" />
     </Box>
-  )
-}
+  );
+};
 
 const ProjectPage = ({ project }) => {
-  const theme = useTheme()
-  const isMatches = useMediaQuery(theme.breakpoints.up("lg"))
-  const [activeSlide, setActiveSlide] = useState(1)
-  const slideImageNumber = project.pictures_name.length
-  const [collaborateurs, SetCollaborateurs] = useState([])
-  const [otherProjects, setOtherProjects] = useState([])
+  const theme = useTheme();
+  const isMatches = useMediaQuery(theme.breakpoints.up("lg"));
+  const [activeSlide, setActiveSlide] = useState(1);
+  const slideImageNumber = project.pictures_name.length;
+  const [collaborateurs, SetCollaborateurs] = useState([]);
+  const [otherProjects, setOtherProjects] = useState([]);
   const otherProjectsFiltered = otherProjects.filter(
     (item) => item.project_id !== project.project_id
-  )
+  );
   const otherProjectsTitle = otherProjectsFiltered.map((project) => {
-    return project.title
-  })
+    return project.title;
+  });
   const otherProjectsId = otherProjectsFiltered.map((project) => {
-    return project.project_id.toString()
-  })
+    return project.project_id.toString();
+  });
   const OtherProjectImage = otherProjectsFiltered.map((project) => {
-    return "https://api-manos.bdph.me/uploads/" + project.pictures_name[0]
-  })
+    return "https://api-manos.bdph.me/uploads/" + project.pictures_name[0];
+  });
 
   useEffect(() => {
     axios
@@ -51,15 +51,15 @@ const ProjectPage = ({ project }) => {
           "/collaborators.php?projectId=" +
           project.project_id
       )
-      .then((res) => SetCollaborateurs(res.data))
+      .then((res) => SetCollaborateurs(res.data));
     axios
       .get(
         process.env.NEXT_PUBLIC_PHP_API_URL +
           "/projects.php?userId=" +
           project.user_id
       )
-      .then((res) => setOtherProjects(res.data))
-  }, [])
+      .then((res) => setOtherProjects(res.data));
+  }, []);
   return (
     <Box maxW="4xl" mx="auto" overflow="hidden" position="relative">
       <Box
@@ -117,7 +117,7 @@ const ProjectPage = ({ project }) => {
               Coût du projet
             </Heading>
             <Text fontSize="sm" color="gray.500">
-              {project.budget.toLocaleString()}
+              {project.budget.toLocaleString()} €
             </Text>
           </Box>
         </Flex>
@@ -190,7 +190,7 @@ const ProjectPage = ({ project }) => {
                         </Link>
                       </Box>
                     </SwiperSlide>
-                  )
+                  );
                 })}
               </Swiper>
             </Box>
@@ -198,20 +198,20 @@ const ProjectPage = ({ project }) => {
         </Box>
       </Flex>
     </Box>
-  )
-}
+  );
+};
 
 export const getServerSideProps = async ({ req, query }) => {
-  const id = query.id
+  const id = query.id;
   const res = await axios.get(
     process.env.NEXT_PUBLIC_PHP_API_URL + "/projects.php?projectId=" + id
-  )
-  const project = res.data
+  );
+  const project = res.data;
 
   return {
     props: { project },
-  }
-}
+  };
+};
 
 ProjectPage.getLayout = (page) => {
   return (
@@ -219,7 +219,7 @@ ProjectPage.getLayout = (page) => {
       <BackArrow />
       {page}
     </DefaultLayout>
-  )
-}
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;

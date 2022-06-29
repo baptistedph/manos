@@ -1,22 +1,22 @@
-import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react"
-import { EmailIcon } from "@chakra-ui/icons"
-import { Swiper, SwiperSlide } from "swiper/react"
-import Image from "next/image"
-import { useState } from "react"
-import Link from "next/link"
-import "swiper/css"
+import { Box, Flex, Heading, Button, Text } from "@chakra-ui/react";
+import { EmailIcon } from "@chakra-ui/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
+import "swiper/css";
 
 const SlideImage = ({ src }) => {
   return (
     <Box position="relative" h={215}>
       <Image src={src} layout="fill" alt="Photo de projet" objectFit="cover" />
     </Box>
-  )
-}
+  );
+};
 
 const ProjectCard = ({ project }) => {
-  const [activeSlide, setActiveSlide] = useState(1)
-  const slideImageNumber = project.pictures_name.length
+  const [activeSlide, setActiveSlide] = useState(1);
+  const slideImageNumber = project.pictures_name.length;
   return (
     <Link href={"/project/" + project.project_id}>
       <Box
@@ -89,7 +89,7 @@ const ProjectCard = ({ project }) => {
                       Coût du projet
                     </Heading>
                     <Text fontSize="sm" color="gray.500">
-                      {project.budget.toLocaleString()}
+                      {project.budget.toLocaleString()} €
                     </Text>
                   </Box>
                 </Flex>
@@ -109,7 +109,7 @@ const ProjectCard = ({ project }) => {
         </Swiper>
       </Box>
     </Link>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
