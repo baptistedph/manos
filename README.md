@@ -1,6 +1,6 @@
 # Manos
 
-Application de mise en relation des artisans.<br>
+Application de mises en relations des artisans.<br>
 Cette version a été réalisée dans le cadre scolaire à l'école Hetic et est un POC. Une version plus aboutie est en cours de développement.<br>
 
 # Prérequis
@@ -18,7 +18,7 @@ Pour remplir les données du .env, veuillez faire une demande au propriétaire d
 
 # Lancer les servers
 
-Pour lancer le server next, taper dans le terminal, à la racine : npm run dev <br>
+Pour lancer le server next, tapez dans le terminal, à la racine : npm run dev <br>
 Pour lancer le server php, allez dans le dossier api puis tapez : php -S localhost:8001<br>
 
 # Crédits
